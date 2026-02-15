@@ -50,7 +50,7 @@
         "Designed secure UI workflow to prevent accidental exposure"
       ],
       "repo": "https://github.com/Dev10-sys/btc-hashframe",
-      "live": "https://btc-hashframe.vercel.app",
+      "live": "https://btc-hashframe-lkcs.vercel.app/",
       "image": { "path": "", "alt": "" }
     },
     {
