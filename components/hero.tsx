@@ -1,3 +1,5 @@
+"use client";
+
 import { BitcoinBackground } from "./bitcoin-background"
 import site from "@/data/site.json"
 import { motion } from "framer-motion"
