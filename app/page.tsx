@@ -38,8 +38,12 @@ export default function Page() {
 
       <footer className="border-t border-border/60 py-12 text-center text-sm text-muted-foreground bg-muted/20">
         <div className="max-w-6xl mx-auto px-4">
-          <p className="mb-2">© {new Date().getFullYear()} Dev. Engineered for the open web.</p>
-          <p className="text-xs opacity-60">Built with Next.js, Tailwind CSS, and Geist Mono.</p>
+          <p className="mb-2 text-foreground font-medium italic tracking-wide">
+            "Engineered for the decentralized future."
+          </p>
+          <p className="text-xs opacity-60">
+            © {new Date().getFullYear()} dev10.sys • Architecture, Systems & Open Source
+          </p>
         </div>
       </footer>
     </main>

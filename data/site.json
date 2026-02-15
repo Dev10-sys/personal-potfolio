@@ -141,7 +141,7 @@
           "Improved CouchDB error clarity"
         ],
         "impact": "Reduced redundant API calls and improved data-layer reliability.",
-        "links": ["https://github.com/dbpedia/databus/pull/251"],
+        "links": ["https://github.com/dbpedia/chatbot/pull/66"],
         "link": "https://github.com/dbpedia"
       }
     ]

@@ -57,7 +57,7 @@ export function Navbar({ showNavLinks = true }: NavbarProps) {
             />
           </svg>
           <span className="text-foreground group-hover:text-[#F7931A] transition-colors">
-            {"{ BTC · Portfolio }"}
+            {"{ dev10.sys }"}
           </span>
         </a>
 
