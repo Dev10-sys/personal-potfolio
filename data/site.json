@@ -1,0 +1,164 @@
+{
+  "hero": {
+    "name": "Dev",
+    "role": "AI/ML & Systems Engineer | Open Source Contributor",
+    "tagline": "Building secure systems, contributing to open infrastructure, and engineering production-grade software.",
+    "primaryCta": {
+      "label": "View Projects",
+      "url": "#projects"
+    },
+    "secondaryCta": {
+      "label": "GitHub",
+      "url": "https://github.com/Dev10-sys"
+    },
+    "animationIntensity": "medium"
+  },
+  "profile": {
+    "location": "Bangalore, India",
+    "education": "B.Tech Computer Science (AI/ML)",
+    "university": "Medhavi Skills University",
+    "shortBio": "I am a B.Tech Computer Science (AI/ML) student focused on systems engineering, open source contribution, and production-ready software development.",
+    "longBio": "My work spans Bitcoin tooling, AI data infrastructure, distributed systems contributions, and full-stack platforms. I prioritize clean architecture, correctness, and real-world execution over theoretical discussions. I actively contribute to open source projects including SugarLabs, OWASP, CHAOSS, and DBpedia.",
+    "skills": {
+      "Core Engineering": [
+        "Data Structures & Algorithms",
+        "Operating Systems",
+        "System Design",
+        "Computer Networks",
+        "Databases"
+      ],
+      "Languages": ["Python", "JavaScript", "TypeScript", "SQL", "Bash"],
+      "Frameworks": ["React", "Next.js", "Node.js"],
+      "Databases": ["PostgreSQL", "MySQL"],
+      "Tools": ["Git", "Linux", "Terminal", "Supabase", "Docker"]
+    },
+    "headshot": {
+      "path": "/images/dev.png",
+      "alt": "Professional photo of Dev"
+    }
+  },
+  "projects": [
+    {
+      "title": "BTC HashFrame",
+      "description": "Security-first Bitcoin QR encoding platform built with client-side cryptographic guarantees.",
+      "tech": ["Next.js 15", "TypeScript", "Cryptographic Validation", "Tailwind", "Client-Side Encoding"],
+      "highlights": [
+        "Implemented full client-side QR generation without server transmission",
+        "Added validation layer for BIP21, PSBT, descriptors",
+        "Built structured encoding engine with strict TypeScript typing",
+        "Added error correction and QR sizing control",
+        "Designed secure UI workflow to prevent accidental exposure"
+      ],
+      "repo": "https://github.com/Dev10-sys/btc-hashframe",
+      "live": "https://btc-hashframe.vercel.app",
+      "image": { "path": "", "alt": "" }
+    },
+    {
+      "title": "SHINRA Labs",
+      "description": "AI Data Labeling Infrastructure Platform with task lifecycle management and marketplace model.",
+      "tech": ["React", "Supabase", "PostgreSQL", "Tailwind", "Realtime Systems"],
+      "highlights": [
+        "Modular frontend architecture using React + Vite",
+        "Role-based workflow system (Company / Freelancer model)",
+        "Dataset marketplace structure (DataSetu model)",
+        "Supabase backend integration (Auth, Storage, Realtime)",
+        "End-to-end task pipeline simulation for B2B AI use cases"
+      ],
+      "repo": "https://github.com/Dev10-sys/shinra-labs",
+      "live": "https://shinra-labs.vercel.app",
+      "image": { "path": "", "alt": "" }
+    }
+  ],
+  "openSource": {
+    "summary": "I contribute to system-level open source projects across Linux environments, networking infrastructure, security tooling, and distributed systems. My work focuses on reliability, bug fixes, system correctness, and real-world stability improvements.",
+    "stats": {
+      "totalPRs": "25+",
+      "mergedPRs": "4+",
+      "orgs": "5+",
+      "languages": ["Go", "Python", "TypeScript", "JavaScript"]
+    },
+    "organizations": [
+      {
+        "name": "SugarLabs",
+        "tagline": "Linux Desktop Environment – Python / GTK",
+        "role": "Core contributor to Sugar Learning Environment.",
+        "contributions": [
+          "Fixed datastore restart handling after DBus disconnect",
+          "Improved clipboard handling when multiple items exist",
+          "Journal UX fixes including range selection & search focus preservation",
+          "Control panel write optimization to reduce excessive disk writes",
+          "Modal handling improvements in ActivityChooser"
+        ],
+        "impact": "Improved system stability, input reliability, and UI behavior across core desktop components.",
+        "link": "https://github.com/sugarlabs/sugar/pulls?q=author%3ADev10-sys"
+      },
+      {
+        "name": "BeagleBoard",
+        "tagline": "Linux Kernel / Embedded Systems",
+        "role": "Contributor",
+        "contributions": [
+          "Kernel-level and embedded system related improvements",
+          "Documentation and integration work across BeagleBoard ecosystem"
+        ],
+        "impact": "Low-level systems exposure, Linux-based hardware workflows, and embedded runtime understanding.",
+        "link": "https://github.com/beagleboard"
+      },
+      {
+        "name": "CHAOSS",
+        "tagline": "Open Source Metrics & Data Science",
+        "role": "Contributor",
+        "contributions": [
+          "Bugzilla REST pagination failure handling",
+          "Contributor repository map improvements",
+          "Sustainability documentation clarity fixes"
+        ],
+        "impact": "Improved robustness of open source health analytics tooling used across community metrics research.",
+        "links": [
+          "https://github.com/chaoss/grimoirelab-perceval/pull/885",
+          "https://github.com/chaoss/community/pull/765"
+        ],
+        "link": "https://github.com/chaoss"
+      },
+      {
+        "name": "OWASP",
+        "tagline": "Security Automation & Workflow",
+        "role": "Contributor",
+        "contributions": [
+          "GitHub Actions workflow to prevent duplicate quality labels",
+          "Automation enforcement in issue management"
+        ],
+        "impact": "Improved contributor workflow hygiene and CI-based quality enforcement.",
+        "links": ["https://github.com/OWASP-BLT/BLT/pull/5540"],
+        "link": "https://github.com/OWASP-BLT/BLT/pulls?q=author%3ADev10-sys"
+      },
+      {
+        "name": "DBpedia",
+        "tagline": "Data Infrastructure / Knowledge Graph",
+        "role": "Contributor",
+        "contributions": [
+          "Client-side artifact title generation fix",
+          "Vault-authenticated duplicate request prevention",
+          "Improved CouchDB error clarity"
+        ],
+        "impact": "Reduced redundant API calls and improved data-layer reliability.",
+        "links": ["https://github.com/dbpedia/databus/pull/251"],
+        "link": "https://github.com/dbpedia"
+      }
+    ]
+  },
+  "contact": {
+    "email": "mailto:kalpanagola9897@gmail.com",
+    "github": "https://github.com/Dev10-sys",
+    "linkedin": "https://linkedin.com/in/dev",
+    "twitter": "https://x.com/dev"
+  },
+  "seo": {
+    "title": "Dev - Systems Engineer",
+    "description": "Bitcoin systems, open source engineering, and AI infrastructure.",
+    "ogImage": { "path": "/images/og.jpg", "alt": "Portfolio preview image" }
+  },
+  "theme": {
+    "accent": "#f7931a",
+    "btcSymbols": true
+  }
+}
