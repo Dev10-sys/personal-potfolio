@@ -33,7 +33,7 @@
       "Tools": ["Git", "Linux", "Terminal", "Supabase", "Docker"]
     },
     "headshot": {
-      "path": "/images/dev.png",
+      "path": "/images/profile.png",
       "alt": "Professional photo of Dev"
     }
   },
@@ -65,7 +65,7 @@
         "End-to-end task pipeline simulation for B2B AI use cases"
       ],
       "repo": "https://github.com/Dev10-sys/shinra-labs",
-      "live": "https://shinra-labs.vercel.app",
+      "live": "https://shinra-labs-clean.vercel.app",
       "image": { "path": "", "alt": "" }
     }
   ],
@@ -149,7 +149,7 @@
   "contact": {
     "email": "mailto:kalpanagola9897@gmail.com",
     "github": "https://github.com/Dev10-sys",
-    "linkedin": "https://linkedin.com/in/dev",
+    "linkedin": "https://www.linkedin.com/in/dev10-sys",
     "twitter": "https://x.com/Dev10_shadow"
   },
   "seo": {
