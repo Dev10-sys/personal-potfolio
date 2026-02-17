@@ -48,7 +48,7 @@ export function OpenSourcePreview() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
           {[
             { label: "Total Contributions", value: openSource.stats.totalPRs, icon: Trophy, color: "text-primary" },
-            { label: "Accepted PRs", value: openSource.stats.mergedPRs, icon: GitPullRequest, color: "text-green-500" },
+            { label: "Merged PRs", value: openSource.stats.mergedPRs, icon: GitPullRequest, color: "text-green-500" },
             { label: "Partner Orgs", value: openSource.stats.orgs, icon: Globe, color: "text-blue-500" },
             { label: "Tech Stack", value: openSource.stats.languages.length, icon: Code2, color: "text-orange-500" },
           ].map((stat, i) => (
@@ -57,13 +57,14 @@ export function OpenSourcePreview() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
+              whileHover={{ scale: 1.03 }}
               viewport={{ once: true }}
-              className="group relative p-8 rounded-3xl bg-card/40 border border-border/80 hover:border-primary/40 transition-all backdrop-blur-sm"
+              className="group relative p-8 rounded-3xl bg-card/40 border border-border/80 hover:border-primary/40 transition-all backdrop-blur-sm shadow-sm"
             >
               <div className="absolute top-4 right-4 opacity-10 group-hover:opacity-20 transition-opacity">
                 <stat.icon className={`h-12 w-12 ${stat.color}`} />
               </div>
-              <div className="text-4xl font-bold tracking-tight mb-2">{stat.value}</div>
+              <div className="text-4xl font-extrabold tracking-tight mb-2">{stat.value}</div>
               <div className="text-sm font-semibold uppercase tracking-widest text-muted-foreground">{stat.label}</div>
             </motion.div>
           ))}
@@ -132,10 +133,10 @@ export function OpenSourcePreview() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative group p-1 rounded-[2.5rem] bg-gradient-to-br from-primary/20 via-border/50 to-orange-600/20 shadow-2xl"
+          className="relative group p-1 rounded-[2.5rem] bg-gradient-to-br from-primary/12 via-border/50 to-orange-600/12 shadow-xl"
         >
           <div className="bg-card rounded-[2.2rem] p-10 md:p-14 overflow-hidden relative">
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
             
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-12 mb-12">
               <div className="space-y-4">
@@ -143,17 +144,25 @@ export function OpenSourcePreview() {
                   <div className="p-3 bg-primary/10 rounded-2xl">
                     <Github className="h-8 w-8" />
                   </div>
-                  <h3 className="text-3xl font-bold tracking-tight">System Reliability Index</h3>
+                  <div className="flex flex-col">
+                    <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary/60 mb-1">Dev10.sys</span>
+                    <h3 className="text-3xl font-bold tracking-tight text-foreground">Open Source Contribution Graph</h3>
+                  </div>
                 </div>
-                <p className="max-w-xl text-lg text-muted-foreground leading-relaxed">
-                  A visual audit of continuous deployment and consistency across the global open source grid.
-                </p>
+                <div className="space-y-2">
+                  <p className="max-w-xl text-lg text-muted-foreground leading-relaxed">
+                    A record of upstream contributions, merged pull requests, and long-running systems-level work.
+                  </p>
+                  <p className="text-sm font-medium text-muted-foreground/60 italic">
+                    Includes contributions to SugarLabs and related systems infrastructure projects.
+                  </p>
+                </div>
               </div>
               
-              <Link href={`https://github.com/${site.contact.github.split("/").pop()}`} target="_blank">
+              <Link href={process.env.NEXT_PUBLIC_GITHUB_URL || `https://github.com/${site.contact.github.split("/").pop()}`} target="_blank">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold rounded-2xl px-10 h-14 shadow-lg shadow-primary/20 hover:scale-105 active:scale-95 transition-all">
-                  <Users className="h-5 w-5 mr-3" />
-                  Audit Profile
+                  <Github className="h-5 w-5 mr-3" />
+                  View GitHub Activity
                 </Button>
               </Link>
             </div>
@@ -162,29 +171,29 @@ export function OpenSourcePreview() {
                <img 
                  src={`https://ghchart.rshah.org/F7931A/${site.contact.github.split("/").pop()}`} 
                  alt={`${site.hero.name}'s Github Chart`}
-                 className="w-full max-w-5xl mx-auto opacity-100 filter drop-shadow-[0_0_15px_rgba(247,147,26,0.15)] scale-[1.02]"
+                 className="w-full max-w-5xl mx-auto opacity-100 filter drop-shadow-[0_0_10px_rgba(247,147,26,0.08)] scale-[1.02]"
                />
                
                <div className="absolute inset-0 bg-gradient-to-t from-card/40 via-transparent to-transparent pointer-events-none" />
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12 pt-12 border-t border-border/40">
-               <div>
-                  <div className="text-xs uppercase tracking-[0.2em] font-bold text-muted-foreground/60 mb-1">Consistency</div>
-                  <div className="text-xl font-bold">High Precision</div>
-               </div>
-               <div>
-                  <div className="text-xs uppercase tracking-[0.2em] font-bold text-muted-foreground/60 mb-1">Impact</div>
-                  <div className="text-xl font-bold">Systems Core</div>
-               </div>
-               <div>
-                  <div className="text-xs uppercase tracking-[0.2em] font-bold text-muted-foreground/60 mb-1">Status</div>
-                  <div className="text-xl font-bold text-green-500">Active</div>
-               </div>
-               <div>
-                  <div className="text-xs uppercase tracking-[0.2em] font-bold text-muted-foreground/60 mb-1">Trust</div>
-                  <div className="text-xl font-bold">Verified</div>
-               </div>
+               <motion.div whileHover={{ scale: 1.03 }} className="transition-transform">
+                  <div className="text-xs uppercase tracking-[0.2em] font-semibold text-muted-foreground/60 mb-1">Consistency</div>
+                  <div className="text-xl font-extrabold">Sustained Upstream Contributions</div>
+               </motion.div>
+               <motion.div whileHover={{ scale: 1.03 }} className="transition-transform">
+                  <div className="text-xs uppercase tracking-[0.2em] font-semibold text-muted-foreground/60 mb-1">Impact</div>
+                  <div className="text-xl font-extrabold">Crash Recovery & Runtime Fixes</div>
+               </motion.div>
+               <motion.div whileHover={{ scale: 1.03 }} className="transition-transform">
+                  <div className="text-xs uppercase tracking-[0.2em] font-semibold text-muted-foreground/60 mb-1">Status</div>
+                  <div className="text-xl font-extrabold text-green-500">Merged to Master</div>
+               </motion.div>
+               <motion.div whileHover={{ scale: 1.03 }} className="transition-transform">
+                  <div className="text-xs uppercase tracking-[0.2em] font-semibold text-muted-foreground/60 mb-1">Trust</div>
+                  <div className="text-xl font-extrabold">Maintainer Reviewed</div>
+               </motion.div>
             </div>
           </div>
         </motion.div>
