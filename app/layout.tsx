@@ -7,10 +7,10 @@ import { Suspense } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://krrishsehgal.vercel.app"),
+  metadataBase: new URL("https://dev10-sys.vercel.app"),
   title: {
-    default: "Krrish Sehgal - Bitcoin & Blockchain Developer",
-    template: "%s | Krrish Sehgal",
+    default: "Dev10-sys - Bitcoin & Blockchain Developer",
+    template: "%s | Dev10-sys",
   },
   description:
     "Bitcoin & Blockchain Developer | GSoC & Summer of Bitcoin Contributor | Building secure blockchain solutions, Bitcoin applications, and AI-driven systems. Open to Bitcoin development roles.",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     "Google Summer of Code",
     "PSBT Signing",
     "Cryptography",
-    "Krrish Sehgal",
+    "Dev10-sys",
     "Bitcoin Engineer",
     "Lightning Network",
     "Cryptocurrency Developer",
@@ -31,17 +31,17 @@ export const metadata: Metadata = {
     "Bitcoin Programming",
     "Software Engineer",
   ],
-  authors: [{ name: "Krrish Sehgal", url: "https://github.com/krrish-sehgal" }],
-  creator: "Krrish Sehgal",
-  publisher: "Krrish Sehgal",
+  authors: [{ name: "Dev10-sys", url: "https://github.com/Dev10-sys" }],
+  creator: "Dev10-sys",
+  publisher: "Dev10-sys",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://krrishsehgal.vercel.app",
-    title: "Krrish Sehgal - Bitcoin & Blockchain Developer",
+    url: "https://dev10-sys.vercel.app",
+    title: "Dev10-sys - Bitcoin & Blockchain Developer",
     description:
       "Bitcoin & Blockchain Developer seeking opportunities in Bitcoin development. GSoC & Summer of Bitcoin contributor with expertise in blockchain, cryptography, and secure applications.",
-    siteName: "Krrish Sehgal Portfolio",
+    siteName: "Dev10-sys Portfolio",
     images: [
       {
         url: "/images/krrishSehgal_tech.png",
@@ -53,10 +53,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Krrish Sehgal - Bitcoin & Blockchain Developer",
+    title: "Dev10-sys - Bitcoin & Blockchain Developer",
     description:
       "Bitcoin Developer | GSoC & Summer of Bitcoin Contributor | Open to Bitcoin development opportunities",
-    creator: "@KrrishSehgal",
+    creator: "@Dev10_sys",
     images: ["/images/krrishSehgal_tech.png"],
   },
   robots: {

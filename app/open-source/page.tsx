@@ -22,7 +22,7 @@ export default function OpenSourcePage() {
           </h1>
           <p className="mt-2 max-w-2xl text-muted-foreground">
             Live GitHub stats for{" "}
-            <span className="font-medium">krrish-sehgal</span> — PRs categorized
+            <span className="font-medium">Dev10-sys</span> — PRs categorized
             by type, organization breakdown, and monthly activity.
           </p>
         </header>
@@ -35,7 +35,7 @@ export default function OpenSourcePage() {
             </div>
           }
         >
-          <OpenSourceDashboard username="krrish-sehgal" />
+          <OpenSourceDashboard username="Dev10-sys" />
         </Suspense>
       </section>
     </main>

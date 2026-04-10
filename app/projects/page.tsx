@@ -11,7 +11,7 @@ export default function ProjectsPage() {
       <footer className="border-t border-border/60 py-10 text-center text-sm text-muted-foreground">
         {"© "}
         {new Date().getFullYear()}
-        {" Krrish Sehgal. Built with Next.js."}
+        {" Dev10-sys. Built with Next.js."}
       </footer>
     </main>
   );
