@@ -56,8 +56,8 @@ export function Navbar({ showNavLinks = true }: NavbarProps) {
               d="M3 12h18M3 12l6-6m-6 6l6 6"
             />
           </svg>
-          <span className="text-foreground group-hover:text-[#F7931A] transition-colors tracking-widest uppercase">
-            {"Dev / Systems"}
+          <span className="text-foreground group-hover:text-[#F7931A] transition-colors font-black tracking-[0.3em] uppercase text-base">
+            {"Dev"}
           </span>
         </a>
 

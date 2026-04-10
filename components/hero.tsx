@@ -34,17 +34,17 @@ export function Hero() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
+        <div className="flex flex-col items-center text-center max-w-[1100px] mx-auto">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="mb-8 flex flex-col items-center"
+            className="mb-10 flex flex-col items-center"
           >
-            <span className="font-black text-4xl md:text-5xl tracking-[0.2em] uppercase text-foreground mb-4 opacity-90">
+            <span className="font-black text-3xl md:text-4xl tracking-[0.4em] uppercase text-foreground mb-6 opacity-95">
               Dev
             </span>
-            <span className="font-mono text-[10px] md:text-xs font-bold tracking-[0.4em] uppercase text-primary/60">
+            <span className="font-mono text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase text-primary opacity-90 drop-shadow-[0_0_10px_rgba(247,147,26,0.2)]">
               {site.hero.tagline.replace("Dev — ", "")}
             </span>
           </motion.div>
@@ -53,11 +53,11 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-10 leading-[1.1] md:leading-[1]"
+            className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter mb-12 leading-[1.1]"
           >
-            <span className="relative inline-block bg-clip-text text-transparent bg-gradient-to-br from-foreground to-foreground/60">
+            <span className="relative inline-block bg-clip-text text-transparent bg-gradient-to-br from-foreground to-foreground/50">
               {site.hero.mainHeading}
-              <span className="absolute -inset-4 bg-primary/10 blur-3xl -z-10 rounded-full" />
+              <span className="absolute -inset-4 bg-primary/5 blur-3xl -z-10 rounded-full" />
             </span>
           </motion.h1>
 
@@ -65,7 +65,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="text-lg md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mb-14 font-medium"
+            className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mb-14 font-medium"
           >
             {site.hero.subline}
           </motion.p>
