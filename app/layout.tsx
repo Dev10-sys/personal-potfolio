@@ -9,11 +9,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://dev10-sys.vercel.app"),
   title: {
-    default: "Dev10-sys - Bitcoin & Blockchain Developer",
+    default: "Dev10-sys - Software Engineer",
     template: "%s | Dev10-sys",
   },
   description:
-    "Bitcoin & Blockchain Developer | GSoC & Summer of Bitcoin Contributor | Building secure blockchain solutions, Bitcoin applications, and AI-driven systems. Open to Bitcoin development roles.",
+    "Software Engineer | GSoC & Summer of Bitcoin Contributor | Building secure software solutions, Bitcoin applications, and AI-driven systems.",
   keywords: [
     "Bitcoin Developer",
     "Blockchain Developer",
@@ -38,9 +38,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://dev10-sys.vercel.app",
-    title: "Dev10-sys - Bitcoin & Blockchain Developer",
+    title: "Dev10-sys - Software Engineer",
     description:
-      "Bitcoin & Blockchain Developer seeking opportunities in Bitcoin development. GSoC & Summer of Bitcoin contributor with expertise in blockchain, cryptography, and secure applications.",
+      "Software Engineer with expertise in blockchain, cryptography, and secure applications. GSoC & Summer of Bitcoin contributor.",
     siteName: "Dev10-sys Portfolio",
     images: [
       {
@@ -53,9 +53,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dev10-sys - Bitcoin & Blockchain Developer",
+    title: "Dev10-sys - Software Engineer",
     description:
-      "Bitcoin Developer | GSoC & Summer of Bitcoin Contributor | Open to Bitcoin development opportunities",
+      "Software Engineer | GSoC & Summer of Bitcoin Contributor",
     creator: "@Dev10_sys",
     images: ["/images/krrishSehgal_tech.png"],
   },

@@ -1,7 +1,7 @@
 {
   "hero": {
     "name": "Dev",
-    "role": "AI/ML & Systems Engineer | Open Source Contributor",
+    "role": "Software Engineer",
     "tagline": "Building secure systems, contributing to open infrastructure, and engineering production-grade software.",
     "primaryCta": {
       "label": "View Projects",
@@ -153,8 +153,8 @@
     "twitter": "https://x.com/dev"
   },
   "seo": {
-    "title": "Dev - Systems Engineer",
-    "description": "Bitcoin systems, open source engineering, and AI infrastructure.",
+    "title": "Dev10-sys - Software Engineer",
+    "description": "Software Engineer with a focus on systems, security, and open source infrastructure.",
     "ogImage": { "path": "/images/og.jpg", "alt": "Portfolio preview image" }
   },
   "theme": {
