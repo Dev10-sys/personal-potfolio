@@ -40,15 +40,14 @@ const BitcoinBackground = ({
     if (!ctx) return
 
     const color = (token: string, alpha: number, fallback: string) => {
-      // Use Bitcoin-themed colors directly instead of CSS variables
       const bitcoinColors: Record<string, string> = {
         primary: '247, 147, 26', // Bitcoin orange
-        accent: '255, 215, 0', // Gold
-        foreground: '247, 147, 26', // Bitcoin orange
-        'muted-foreground': '247, 147, 26' // Bitcoin orange
+        accent: '252, 194, 3', // Gold/Yellow
+        foreground: '255, 234, 167', // Cream/Yellow
+        'muted-foreground': '247, 147, 26' 
       }
       
-      const colorValue = bitcoinColors[token] || '247, 147, 26' // Default to Bitcoin orange
+      const colorValue = bitcoinColors[token] || '247, 147, 26'
       return `rgba(${colorValue}, ${Math.max(0, Math.min(1, alpha))})` || fallback
     }
 
