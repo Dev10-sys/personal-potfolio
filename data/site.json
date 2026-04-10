@@ -94,7 +94,7 @@
       },
       {
         "name": "OpenSSF (RSTUF)",
-        "tagline": "Secure Software Supply Chain Hardening (TUF-based systems)",
+        "tagline": "Production security hardening across distributed services (non-root container enforcement)",
         "role": "Contributor",
         "contributions": [
           "Enforced non-root container execution across distributed microservices",
@@ -102,11 +102,21 @@
           "Improved API validation layers and service isolation"
         ],
         "impact": "Hardened software supply chain security for microservices and distribution pipelines.",
+        "links": [
+          "https://github.com/repository-service-tuf/repository-service-tuf/pull/950",
+          "https://github.com/repository-service-tuf/repository-service-tuf/pull/934",
+          "https://github.com/repository-service-tuf/repository-service-tuf-api/pull/919",
+          "https://github.com/repository-service-tuf/repository-service-tuf-api/pull/916",
+          "https://github.com/repository-service-tuf/repository-service-tuf-worker/pull/854",
+          "https://github.com/repository-service-tuf/repository-service-tuf-worker/pull/850",
+          "https://github.com/repository-service-tuf/helm-charts/pull/57",
+          "https://github.com/repository-service-tuf/helm-charts/pull/56"
+        ],
         "link": "https://github.com/repository-service-tuf/repository-service-tuf/pulls?q=author%3ADev10-sys"
       },
       {
         "name": "Web3j (LFDT)",
-        "tagline": "Ethereum Protocol & JVM-Level Reliability Fixes",
+        "tagline": "Blockchain protocol fixes and JVM-level reliability improvements",
         "role": "Contributor",
         "contributions": [
           "Fixed EIP-4844 transaction encoding impacting signing correctness",
@@ -114,11 +124,16 @@
           "Improved type safety in RPC response handling"
         ],
         "impact": "Improved protocol reliability and system performance for Ethereum-based JVM applications.",
+        "links": [
+          "https://github.com/LFDT-web3j/web3j/pull/2257",
+          "https://github.com/LFDT-web3j/web3j/pull/2255",
+          "https://github.com/LFDT-web3j/web3j/pull/2254"
+        ],
         "link": "https://github.com/LFDT-web3j/web3j/pulls?q=author%3ADev10-sys"
       },
       {
         "name": "Hyperledger Cacti",
-        "tagline": "Enterprise Blockchain Interoperability & Infra Stability",
+        "tagline": "Enterprise blockchain infra, dependency security, and protocol feature development",
         "role": "Contributor",
         "contributions": [
           "Fixed docker test crash loops affecting CI stability",
@@ -126,28 +141,44 @@
           "Contributed protocol-level feature (ERC6909 token support)"
         ],
         "impact": "Stabilized enterprise blockchain infrastructure and expanded protocol support.",
+        "links": [
+          "https://github.com/hyperledger-cacti/cacti/pull/4183",
+          "https://github.com/hyperledger-cacti/cacti/pull/4182",
+          "https://github.com/hyperledger-cacti/cacti/pull/4181",
+          "https://github.com/hyperledger-cacti/cacti/pull/4180",
+          "https://github.com/hyperledger-cacti/cacti/pull/4179",
+          "https://github.com/hyperledger-cacti/cacti/pull/4176"
+        ],
         "link": "https://github.com/hyperledger-cacti/cacti/pulls?q=author%3ADev10-sys"
       },
       {
         "name": "SONiC",
-        "tagline": "Cloud Networking & Infrastructure Testing",
+        "tagline": "Network infrastructure testing (IPv6 environments and VOQ systems)",
         "role": "Contributor",
         "contributions": [
           "Enabled IPv6-only environment testing for COPP",
           "Extended VOQ test coverage for single-ASIC systems"
         ],
         "impact": "Enhanced networking infrastructure test coverage for cloud environments.",
+        "links": [
+          "https://github.com/sonic-net/sonic-mgmt/pull/23181",
+          "https://github.com/sonic-net/sonic-mgmt/pull/23171"
+        ],
         "link": "https://github.com/sonic-net/sonic-mgmt/pulls?q=author%3ADev10-sys"
       },
       {
         "name": "Chicago Pediatric Cancer Data Commons",
-        "tagline": "Healthcare ML Pipeline & Data Infrastructure",
+        "tagline": "Healthcare ML pipeline fixes and dynamic clinical trial matching system",
         "role": "Contributor",
         "contributions": [
           "Fixed execution issues in ML pipeline notebooks",
           "Built dynamic clinical trial matching dashboard"
         ],
         "impact": "Streamlined healthcare ML workflows and improved clinical trial patient matching.",
+        "links": [
+          "https://github.com/chicagopcdc/Automated-Matching-of-Patients-to-Clinical-Trials/pull/4",
+          "https://github.com/chicagopcdc/Automated-Matching-of-Patients-to-Clinical-Trials/pull/3"
+        ],
         "link": "https://github.com/chicagopcdc/Automated-Matching-of-Patients-to-Clinical-Trials/pulls?q=author%3ADev10-sys"
       },
       {
