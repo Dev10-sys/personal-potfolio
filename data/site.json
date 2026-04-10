@@ -1,7 +1,7 @@
 {
   "hero": {
     "name": "Dev",
-    "role": "Software Engineer",
+    "role": "Software Developer",
     "tagline": "Building secure systems, contributing to open infrastructure, and engineering production-grade software.",
     "primaryCta": {
       "label": "View Projects",
@@ -72,8 +72,8 @@
   "openSource": {
     "summary": "I contribute to system-level open source projects across Linux environments, networking infrastructure, security tooling, and distributed systems. My work focuses on reliability, bug fixes, system correctness, and real-world stability improvements.",
     "stats": {
-      "totalPRs": "50+",
-      "mergedPRs": "50+",
+      "totalPRs": "70+",
+      "mergedPRs": "70+",
       "orgs": "5+",
       "languages": ["Go", "Python", "TypeScript", "JavaScript"]
     },
@@ -153,8 +153,8 @@
     "twitter": "https://x.com/dev"
   },
   "seo": {
-    "title": "Dev10-sys - Software Engineer",
-    "description": "Software Engineer with a focus on systems, security, and open source infrastructure.",
+    "title": "Dev10-sys - Software Developer",
+    "description": "Software Developer with a focus on systems, security, and open source infrastructure.",
     "ogImage": { "path": "/images/og.jpg", "alt": "Portfolio preview image" }
   },
   "theme": {

@@ -156,6 +156,7 @@ const BitcoinBackground = ({
     const drawNetwork = () => {
       if (!network) return
       const maxDist = 90
+      const time = performance.now() * 0.001
       for (let i = 0; i < nodes.length; i++) {
         const n1 = nodes[i]
         for (let j = i + 1; j < nodes.length; j++) {
@@ -165,8 +166,10 @@ const BitcoinBackground = ({
           const d2 = dx * dx + dy * dy
           if (d2 < maxDist * maxDist) {
             const a = 1 - Math.sqrt(d2) / maxDist
-            ctx.strokeStyle = color("accent", 0.3 * a, `rgba(247,147,26,${0.3 * a})`) // subtle network lines like ₿ symbols
-            ctx.lineWidth = 4.5
+            // Dynamic pulse for lines
+            const linePulse = 0.5 + Math.sin(time + (n1.x + n1.y) * 0.01) * 0.2
+            ctx.strokeStyle = color("accent", 0.4 * a * linePulse, `rgba(247,147,26,${0.4 * a * linePulse})`) 
+            ctx.lineWidth = 1.5 + a * 2
             ctx.beginPath()
             ctx.moveTo(n1.x, n1.y)
             ctx.lineTo(n2.x, n2.y)
@@ -175,10 +178,18 @@ const BitcoinBackground = ({
         }
       }
       for (const n of nodes) {
-        ctx.fillStyle = color("primary", Math.min(1, n.o * 1.5), `rgba(247,147,26,${Math.min(1, n.o * 1.5)})`) // very bright nodes
+        // Subtle pulsing for nodes
+        const pulse = 1 + Math.sin(time * 2 + (n.x + n.y) * 0.01) * 0.15
+        ctx.fillStyle = color("primary", Math.min(1, n.o * 2 * pulse), `rgba(247,147,26,${Math.min(1, n.o * 2 * pulse)})`)
         ctx.beginPath()
-        ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2)
+        ctx.arc(n.x, n.y, n.r * pulse, 0, Math.PI * 2)
         ctx.fill()
+        
+        // Add a subtle outer glow for nodes
+        ctx.shadowBlur = 8 * pulse
+        ctx.shadowColor = `rgba(247, 147, 26, ${0.4 * pulse})`
+        ctx.stroke()
+        ctx.shadowBlur = 0
 
         if (!prefersReduced) {
           n.x += n.vx
