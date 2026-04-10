@@ -24,7 +24,7 @@ export function OpenSourcePreview() {
               Engineered for the Open Web
             </Badge>
             <h2 className="text-5xl md:text-6xl font-bold tracking-tight">
-              Open Source <span className="text-primary">Engineering</span>
+              Open Source <span className="text-primary">Contributor</span>
             </h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
               {openSource.summary}
@@ -49,7 +49,7 @@ export function OpenSourcePreview() {
           {[
             { label: "Total Contributions", value: openSource.stats.totalPRs, icon: Trophy, color: "text-primary" },
             { label: "Accepted PRs", value: openSource.stats.mergedPRs, icon: GitPullRequest, color: "text-green-500" },
-            { label: "Partner Orgs", value: openSource.stats.orgs, icon: Globe, color: "text-blue-500" },
+            { label: "Impacted Organizations", value: openSource.stats.orgs, icon: Globe, color: "text-blue-500" },
             { label: "Tech Stack", value: openSource.stats.languages.length, icon: Code2, color: "text-orange-500" },
           ].map((stat, i) => (
             <motion.div

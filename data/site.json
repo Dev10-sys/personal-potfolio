@@ -72,8 +72,8 @@
   "openSource": {
     "summary": "I contribute to system-level open source projects across Linux environments, networking infrastructure, security tooling, and distributed systems. My work focuses on reliability, bug fixes, system correctness, and real-world stability improvements.",
     "stats": {
-      "totalPRs": "25+",
-      "mergedPRs": "4+",
+      "totalPRs": "50+",
+      "mergedPRs": "50+",
       "orgs": "5+",
       "languages": ["Go", "Python", "TypeScript", "JavaScript"]
     },
