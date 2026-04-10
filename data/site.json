@@ -25,12 +25,36 @@
         "Operating Systems",
         "System Design",
         "Computer Networks",
-        "Databases"
+        "Databases",
+        "Distributed Systems",
+        "Concurrency & Multithreading"
       ],
-      "Languages": ["Python", "JavaScript", "TypeScript", "SQL", "Bash"],
-      "Frameworks": ["React", "Next.js", "Node.js"],
-      "Databases": ["PostgreSQL", "MySQL"],
-      "Tools": ["Git", "Linux", "Terminal", "Supabase", "Docker"]
+      "Languages": ["Python", "JavaScript", "TypeScript", "Java", "C/C++", "SQL", "Bash"],
+      "Frameworks": ["React", "Next.js", "Node.js", "Express.js", "REST APIs", "Spring Boot"],
+      "Databases": ["PostgreSQL", "MySQL", "Redis", "Supabase"],
+      "Tools": ["Git", "Linux", "Terminal", "GitHub Actions", "CI/CD Pipelines", "Kubernetes", "Postman / API Testing", "Docker"],
+      "Systems & Infrastructure": [
+        "Linux Systems",
+        "Wayland / X11",
+        "D-Bus",
+        "GTK (GUI Systems)",
+        "CLI Tools & Parsing",
+        "Execution Engines / Schedulers"
+      ],
+      "Blockchain": [
+        "Ethereum",
+        "JSON-RPC",
+        "Web3j",
+        "Transaction Encoding (EIP-4844)",
+        "Wallet Integration (NWC, Lightning)"
+      ],
+      "Security": [
+        "Secure Software Supply Chain (TUF / RSTUF)",
+        "Container Security",
+        "Non-root Execution",
+        "API Validation",
+        "Runtime Hardening"
+      ]
     },
     "headshot": {
       "path": "/images/profile.png",
