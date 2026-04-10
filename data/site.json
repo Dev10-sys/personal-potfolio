@@ -74,7 +74,7 @@
     "stats": {
       "totalPRs": "70+",
       "mergedPRs": "70+",
-      "orgs": "5+",
+      "orgs": "10+",
       "languages": ["Go", "Python", "TypeScript", "JavaScript"]
     },
     "organizations": [
@@ -91,6 +91,64 @@
         ],
         "impact": "Improved system stability, input reliability, and UI behavior across core desktop components.",
         "link": "https://github.com/sugarlabs/sugar/pulls?q=author%3ADev10-sys"
+      },
+      {
+        "name": "OpenSSF (RSTUF)",
+        "tagline": "Secure Software Supply Chain Hardening (TUF-based systems)",
+        "role": "Contributor",
+        "contributions": [
+          "Enforced non-root container execution across distributed microservices",
+          "Strengthened runtime security posture for package distribution pipelines",
+          "Improved API validation layers and service isolation"
+        ],
+        "impact": "Hardened software supply chain security for microservices and distribution pipelines.",
+        "link": "https://github.com/repository-service-tuf/repository-service-tuf"
+      },
+      {
+        "name": "Web3j (LFDT)",
+        "tagline": "Ethereum Protocol & JVM-Level Reliability Fixes",
+        "role": "Contributor",
+        "contributions": [
+          "Fixed EIP-4844 transaction encoding impacting signing correctness",
+          "Resolved ClassLoader memory leak in async execution layer",
+          "Improved type safety in RPC response handling"
+        ],
+        "impact": "Improved protocol reliability and system performance for Ethereum-based JVM applications.",
+        "link": "https://github.com/LFDT-web3j/web3j"
+      },
+      {
+        "name": "Hyperledger Cacti",
+        "tagline": "Enterprise Blockchain Interoperability & Infra Stability",
+        "role": "Contributor",
+        "contributions": [
+          "Fixed docker test crash loops affecting CI stability",
+          "Updated vulnerable dependencies and hardened infra setup",
+          "Contributed protocol-level feature (ERC6909 token support)"
+        ],
+        "impact": "Stabilized enterprise blockchain infrastructure and expanded protocol support.",
+        "link": "https://github.com/hyperledger-cacti/cacti"
+      },
+      {
+        "name": "SONiC",
+        "tagline": "Cloud Networking & Infrastructure Testing",
+        "role": "Contributor",
+        "contributions": [
+          "Enabled IPv6-only environment testing for COPP",
+          "Extended VOQ test coverage for single-ASIC systems"
+        ],
+        "impact": "Enhanced networking infrastructure test coverage for cloud environments.",
+        "link": "https://github.com/sonic-net/sonic-mgmt"
+      },
+      {
+        "name": "Chicago Pediatric Cancer Data Commons",
+        "tagline": "Healthcare ML Pipeline & Data Infrastructure",
+        "role": "Contributor",
+        "contributions": [
+          "Fixed execution issues in ML pipeline notebooks",
+          "Built dynamic clinical trial matching dashboard"
+        ],
+        "impact": "Streamlined healthcare ML workflows and improved clinical trial patient matching.",
+        "link": "https://github.com/chicagopcdc/Automated-Matching-of-Patients-to-Clinical-Trials"
       },
       {
         "name": "BeagleBoard",
