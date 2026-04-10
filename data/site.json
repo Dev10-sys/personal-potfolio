@@ -102,7 +102,7 @@
           "Improved API validation layers and service isolation"
         ],
         "impact": "Hardened software supply chain security for microservices and distribution pipelines.",
-        "link": "https://github.com/repository-service-tuf/repository-service-tuf"
+        "link": "https://github.com/repository-service-tuf/repository-service-tuf/pulls?q=author%3ADev10-sys"
       },
       {
         "name": "Web3j (LFDT)",
@@ -114,7 +114,7 @@
           "Improved type safety in RPC response handling"
         ],
         "impact": "Improved protocol reliability and system performance for Ethereum-based JVM applications.",
-        "link": "https://github.com/LFDT-web3j/web3j"
+        "link": "https://github.com/LFDT-web3j/web3j/pulls?q=author%3ADev10-sys"
       },
       {
         "name": "Hyperledger Cacti",
@@ -126,7 +126,7 @@
           "Contributed protocol-level feature (ERC6909 token support)"
         ],
         "impact": "Stabilized enterprise blockchain infrastructure and expanded protocol support.",
-        "link": "https://github.com/hyperledger-cacti/cacti"
+        "link": "https://github.com/hyperledger-cacti/cacti/pulls?q=author%3ADev10-sys"
       },
       {
         "name": "SONiC",
@@ -137,7 +137,7 @@
           "Extended VOQ test coverage for single-ASIC systems"
         ],
         "impact": "Enhanced networking infrastructure test coverage for cloud environments.",
-        "link": "https://github.com/sonic-net/sonic-mgmt"
+        "link": "https://github.com/sonic-net/sonic-mgmt/pulls?q=author%3ADev10-sys"
       },
       {
         "name": "Chicago Pediatric Cancer Data Commons",
@@ -148,7 +148,7 @@
           "Built dynamic clinical trial matching dashboard"
         ],
         "impact": "Streamlined healthcare ML workflows and improved clinical trial patient matching.",
-        "link": "https://github.com/chicagopcdc/Automated-Matching-of-Patients-to-Clinical-Trials"
+        "link": "https://github.com/chicagopcdc/Automated-Matching-of-Patients-to-Clinical-Trials/pulls?q=author%3ADev10-sys"
       },
       {
         "name": "BeagleBoard",
@@ -159,7 +159,7 @@
           "Documentation and integration work across BeagleBoard ecosystem"
         ],
         "impact": "Low-level systems exposure, Linux-based hardware workflows, and embedded runtime understanding.",
-        "link": "https://github.com/beagleboard"
+        "link": "https://github.com/beagleboard/beagleboard/pulls?q=author%3ADev10-sys"
       },
       {
         "name": "CHAOSS",
@@ -175,7 +175,7 @@
           "https://github.com/chaoss/grimoirelab-perceval/pull/885",
           "https://github.com/chaoss/community/pull/765"
         ],
-        "link": "https://github.com/chaoss"
+        "link": "https://github.com/chaoss/grimoirelab-perceval/pulls?q=author%3ADev10-sys"
       },
       {
         "name": "OWASP",
@@ -200,7 +200,7 @@
         ],
         "impact": "Reduced redundant API calls and improved data-layer reliability.",
         "links": ["https://github.com/dbpedia/databus/pull/251"],
-        "link": "https://github.com/dbpedia"
+        "link": "https://github.com/dbpedia/databus/pulls?q=author%3ADev10-sys"
       }
     ]
   },

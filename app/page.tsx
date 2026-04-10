@@ -39,7 +39,6 @@ export default function Page() {
       <footer className="border-t border-border/60 py-12 text-center text-sm text-muted-foreground bg-muted/20">
         <div className="max-w-6xl mx-auto px-4">
           <p className="mb-2">© {new Date().getFullYear()} Dev. Engineered for the open web.</p>
-          <p className="text-xs opacity-60">Built with Next.js, Tailwind CSS, and Geist Mono.</p>
         </div>
       </footer>
     </main>
