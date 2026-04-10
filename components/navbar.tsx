@@ -32,19 +32,19 @@ export function Navbar({ showNavLinks = true }: NavbarProps) {
 
   return (
     <header
-      className={`sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-background/60 ${
-        scrolled ? "border-b border-border/60" : ""
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        scrolled ? "bg-black/60 backdrop-blur-md border-b border-white/10 py-1" : "bg-transparent py-3"
       }`}
       aria-label="Primary"
     >
-      <nav className="container mx-auto flex items-center justify-between px-4 py-3">
+      <nav className="container mx-auto flex items-center justify-between px-6">
         <a
           href="/"
-          className="group flex items-center gap-2 font-mono text-sm font-medium transition-all hover:scale-105"
+          className="group flex items-center gap-3 font-mono text-xs font-bold transition-all hover:scale-105"
           aria-label="Go to home"
         >
           <svg
-            className="w-4 h-4 text-muted-foreground group-hover:text-[#F7931A] transition-colors"
+            className="w-3.5 h-3.5 text-muted-foreground group-hover:text-[#F7931A] transition-colors"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -56,7 +56,7 @@ export function Navbar({ showNavLinks = true }: NavbarProps) {
               d="M3 12h18M3 12l6-6m-6 6l6 6"
             />
           </svg>
-          <span className="text-foreground group-hover:text-[#F7931A] transition-colors">
+          <span className="text-foreground group-hover:text-[#F7931A] transition-colors tracking-widest uppercase">
             {"Dev / Systems"}
           </span>
         </a>
@@ -66,13 +66,14 @@ export function Navbar({ showNavLinks = true }: NavbarProps) {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-1">
               {navLinks.map((link) => (
-                <a key={link.href} href={link.href}>
+                <a key={link.href} href={link.href} className="relative group/link">
                   <Button
                     variant="ghost"
-                    className="text-foreground hover:text-[#F7931A] hover:border-[#F7931A] border border-transparent transition-all"
+                    className="h-9 text-[11px] uppercase tracking-widest font-black text-muted-foreground hover:text-foreground transition-all px-4"
                   >
                     {link.label}
                   </Button>
+                  <div className="absolute bottom-0 left-4 right-4 h-0.5 bg-[#F7931A] scale-x-0 group-hover/link:scale-x-100 transition-transform origin-left" />
                 </a>
               ))}
             </div>

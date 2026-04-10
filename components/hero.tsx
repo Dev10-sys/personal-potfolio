@@ -78,7 +78,7 @@ export function Hero() {
           >
             <a
               href={site.hero.primaryCta.url}
-              className="group relative inline-flex items-center justify-center px-12 py-5 font-bold text-primary-foreground transition-all duration-300 bg-primary rounded-2xl hover:bg-primary/90 hover:scale-105 active:scale-95 shadow-xl shadow-primary/20"
+              className="group relative inline-flex items-center justify-center px-12 py-5 font-bold text-black transition-all duration-300 bg-[#F7931A] rounded-2xl hover:bg-[#F7931A]/90 hover:scale-105 active:scale-95 shadow-xl shadow-[#F7931A]/20"
               aria-label={site.hero.primaryCta.label}
               target={site.hero.primaryCta.url.startsWith("http") ? "_blank" : undefined}
               rel={site.hero.primaryCta.url.startsWith("http") ? "noreferrer" : undefined}
@@ -92,7 +92,7 @@ export function Hero() {
                 href={site.hero.secondaryCta.url}
                 target="_blank"
                 rel="noreferrer"
-                className="group inline-flex items-center justify-center px-12 py-5 font-bold transition-all duration-300 border border-border/80 bg-background/50 backdrop-blur-sm rounded-2xl hover:border-primary/50 hover:bg-primary/5 hover:scale-105 active:scale-95"
+                className="group inline-flex items-center justify-center px-12 py-5 font-bold transition-all duration-300 border border-white/10 bg-transparent rounded-2xl hover:border-white/30 hover:bg-white/5 hover:scale-105 active:scale-95 text-muted-foreground hover:text-foreground"
               >
                 <Github className="mr-3 h-5 w-5" />
                 {site.hero.secondaryCta.label}

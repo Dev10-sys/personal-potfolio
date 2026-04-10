@@ -58,6 +58,9 @@ export default function Page() {
               "Currently working on systems-level contributions and infrastructure reliability."
             </p>
             <div className="h-px w-24 bg-gradient-to-r from-transparent via-primary/40 to-transparent mx-auto" />
+            <p className="text-sm font-mono uppercase tracking-[0.5em] text-primary/40 animate-pulse">
+              Currently building. Always learning.
+            </p>
             <p className="text-2xl font-black tracking-tighter uppercase text-muted-foreground/40">
               Built by Dev
             </p>
