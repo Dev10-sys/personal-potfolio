@@ -36,9 +36,41 @@ export default function Page() {
         </div>
       </section>
 
-      <footer className="border-t border-border/60 py-12 text-center text-sm text-muted-foreground bg-muted/20">
-        <div className="max-w-6xl mx-auto px-4">
-          <p className="mb-2">© {new Date().getFullYear()} Dev. Engineered for the open web.</p>
+      <footer className="relative border-t border-border/40 py-24 overflow-hidden bg-muted/5">
+        <div className="absolute inset-0 -z-10 overflow-hidden">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full" />
+        </div>
+
+        <div className="max-w-6xl mx-auto px-4 text-center space-y-12">
+          {/* Availability Badge */}
+          <div className="flex justify-center">
+            <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-md shadow-lg shadow-primary/5">
+              <span className="relative flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+              </span>
+              <span className="text-sm font-bold tracking-wide text-foreground/80">Available for internships & opportunities</span>
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            <p className="text-xl font-medium text-foreground italic">
+              "Currently working on systems-level contributions and infrastructure reliability."
+            </p>
+            <div className="h-px w-24 bg-gradient-to-r from-transparent via-primary/40 to-transparent mx-auto" />
+            <p className="text-2xl font-black tracking-tighter uppercase text-muted-foreground/40">
+              — Dev10-sys
+            </p>
+          </div>
+
+          <div className="pt-12 border-t border-border/40 space-y-2">
+            <p className="text-lg font-bold tracking-tight text-foreground/60">
+              Systems. Security. Infrastructure. <span className="text-[#f7931a] opacity-80">Built with intent.</span>
+            </p>
+            <p className="text-xs font-mono uppercase tracking-[0.4em] text-muted-foreground/40">
+              © {new Date().getFullYear()} All Rights Reserved
+            </p>
+          </div>
         </div>
       </footer>
     </main>
