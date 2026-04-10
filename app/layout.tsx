@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     title: "Dev10-sys - Software Developer",
     description:
       "Software Developer | GSoC & Summer of Bitcoin Contributor",
-    creator: "@Dev10_sys",
+    creator: "@Dev10_shadow",
     images: ["/images/krrishSehgal_tech.png"],
   },
   robots: {

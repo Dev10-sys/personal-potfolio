@@ -243,19 +243,6 @@
         "impact": "Improved contributor workflow hygiene and CI-based quality enforcement.",
         "links": ["https://github.com/OWASP-BLT/BLT/pull/5540"],
         "link": "https://github.com/OWASP-BLT/BLT/pulls?q=author%3ADev10-sys"
-      },
-      {
-        "name": "DBpedia",
-        "tagline": "Data Infrastructure / Knowledge Graph",
-        "role": "Contributor",
-        "contributions": [
-          "Client-side artifact title generation fix",
-          "Vault-authenticated duplicate request prevention",
-          "Improved CouchDB error clarity"
-        ],
-        "impact": "Reduced redundant API calls and improved data-layer reliability.",
-        "links": ["https://github.com/dbpedia/databus/pull/251"],
-        "link": "https://github.com/dbpedia/databus/pulls?q=author%3ADev10-sys"
       }
     ]
   },
@@ -263,7 +250,7 @@
     "email": "mailto:kalpanagola9897@gmail.com",
     "github": "https://github.com/Dev10-sys",
     "linkedin": "https://linkedin.com/in/dev10-sys",
-    "twitter": "https://x.com/Dev10_sys"
+    "twitter": "https://x.com/Dev10_shadow"
   },
   "seo": {
     "title": "Dev10-sys - Software Developer",
