@@ -39,10 +39,10 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="mb-6 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-md"
+            className="mb-8 px-5 py-2 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-md shadow-lg shadow-primary/5"
           >
-            <span className="font-mono text-xs md:text-sm font-bold tracking-[0.3em] uppercase text-primary">
-              {site.hero.role}
+            <span className="font-mono text-xs md:text-sm font-bold tracking-[0.4em] uppercase text-primary">
+              {site.hero.tagline}
             </span>
           </motion.div>
 
@@ -50,11 +50,11 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter mb-8 leading-[0.9]"
+            className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-10 leading-[1.1] md:leading-[1]"
           >
-            <span className="relative inline-block">
-              {site.hero.name}
-              <span className="absolute -inset-2 bg-primary/20 blur-3xl -z-10 rounded-full" />
+            <span className="relative inline-block bg-clip-text text-transparent bg-gradient-to-br from-foreground to-foreground/60">
+              {site.hero.mainHeading}
+              <span className="absolute -inset-4 bg-primary/10 blur-3xl -z-10 rounded-full" />
             </span>
           </motion.h1>
 
@@ -62,26 +62,26 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="text-lg md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mb-12 font-medium"
+            className="text-lg md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mb-14 font-medium"
           >
-            {site.hero.tagline}
+            {site.hero.subline}
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.6 }}
-            className="flex flex-col sm:flex-row items-center gap-4"
+            className="flex flex-col sm:flex-row items-center gap-6"
           >
             <a
               href={site.hero.primaryCta.url}
-              className="group relative inline-flex items-center justify-center px-10 py-5 font-bold text-primary-foreground transition-all duration-200 bg-primary rounded-2xl hover:bg-primary/90 hover:scale-105 active:scale-95 shadow-xl shadow-primary/20"
+              className="group relative inline-flex items-center justify-center px-12 py-5 font-bold text-primary-foreground transition-all duration-300 bg-primary rounded-2xl hover:bg-primary/90 hover:scale-105 active:scale-95 shadow-xl shadow-primary/20"
               aria-label={site.hero.primaryCta.label}
               target={site.hero.primaryCta.url.startsWith("http") ? "_blank" : undefined}
               rel={site.hero.primaryCta.url.startsWith("http") ? "noreferrer" : undefined}
             >
               {site.hero.primaryCta.label}
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="ml-3 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </a>
             
             {site.hero.secondaryCta?.url && (
@@ -89,9 +89,9 @@ export function Hero() {
                 href={site.hero.secondaryCta.url}
                 target="_blank"
                 rel="noreferrer"
-                className="group inline-flex items-center justify-center px-10 py-5 font-bold transition-all duration-200 border-2 border-border bg-background rounded-2xl hover:border-primary/50 hover:bg-primary/5 hover:scale-105 active:scale-95"
+                className="group inline-flex items-center justify-center px-12 py-5 font-bold transition-all duration-300 border border-border/80 bg-background/50 backdrop-blur-sm rounded-2xl hover:border-primary/50 hover:bg-primary/5 hover:scale-105 active:scale-95"
               >
-                <Github className="mr-2 h-5 w-5" />
+                <Github className="mr-3 h-5 w-5" />
                 {site.hero.secondaryCta.label}
               </a>
             )}

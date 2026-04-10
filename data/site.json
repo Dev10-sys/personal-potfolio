@@ -1,60 +1,52 @@
 {
   "hero": {
     "name": "Dev",
-    "role": "Software Developer",
-    "tagline": "Building secure systems, contributing to open infrastructure, and engineering production-grade software.",
+    "role": "Systems & Secure Infrastructure",
+    "tagline": "Systems • Security • Infrastructure",
+    "mainHeading": "Building reliable systems and shipping production-grade infrastructure.",
+    "subline": "Focused on correctness, security, and real-world impact through open source and protocol-level engineering.",
     "primaryCta": {
-      "label": "View Projects",
+      "label": "Explore Engineering Work",
       "url": "#projects"
     },
     "secondaryCta": {
-      "label": "GitHub",
+      "label": "View Source Code",
       "url": "https://github.com/Dev10-sys"
     },
     "animationIntensity": "medium"
   },
   "profile": {
     "location": "Bangalore, India",
-    "education": "B.Tech Computer Science (AI/ML)",
+    "education": "System Design & Security Hardening",
     "university": "Medhavi Skills University",
-    "shortBio": "I am a B.Tech Computer Science (AI/ML) student focused on systems engineering, open source contribution, and production-ready software development.",
-    "longBio": "I'm a developer who cares about how things work under the hood. Most of my time is spent digging into Bitcoin internals, hardening system security, or contributing to the open source projects that power our digital world. I believe in writing code that is clean, secure, and actually works in production, rather than just talking about theory. I'm currently active in communities like SugarLabs, OpenSSF, and Hyperledger, building tools that make a difference.",
+    "shortBio": "I work at the intersection of systems, security, and infrastructure, building software that works under real-world constraints.",
+    "longBio": "I work at the intersection of systems, security, and infrastructure. My focus is on building reliable software that works under real-world constraints — not just in theory. From debugging runtime issues in Linux environments to implementing blockchain protocol features, I prioritize correctness, stability, and production impact. I actively contribute to open source systems like Sugar Labs, OpenSSF, and Hyperledger, working on areas such as runtime safety, secure software distribution, and protocol-level improvements.",
     "skills": {
-      "Core Engineering": [
-        "Data Structures & Algorithms",
-        "Operating Systems",
-        "System Design",
-        "Computer Networks",
-        "Databases",
-        "Distributed Systems",
-        "Concurrency & Multithreading"
-      ],
-      "Languages": ["Python", "JavaScript", "TypeScript", "Java", "C/C++", "SQL", "Bash"],
-      "Frameworks": ["React", "Next.js", "Node.js", "Express.js", "REST APIs", "Spring Boot"],
-      "Databases": ["PostgreSQL", "MySQL", "Redis", "Supabase"],
-      "Tools": ["Git", "Linux", "Terminal", "GitHub Actions", "CI/CD Pipelines", "Kubernetes", "Postman / API Testing", "Docker"],
       "Systems & Infrastructure": [
         "Linux Systems",
         "Wayland / X11",
         "D-Bus",
-        "GTK (GUI Systems)",
+        "GTK (Used in Sugar Labs)",
         "CLI Tools & Parsing",
         "Execution Engines / Schedulers"
       ],
-      "Blockchain": [
-        "Ethereum",
-        "JSON-RPC",
-        "Web3j",
-        "Transaction Encoding (EIP-4844)",
-        "Wallet Integration (NWC, Lightning)"
-      ],
       "Security": [
-        "Secure Software Supply Chain (TUF / RSTUF)",
-        "Container Security",
-        "Non-root Execution",
-        "API Validation",
-        "Runtime Hardening"
-      ]
+        "Secure Software Supply Chain (RSTUF)",
+        "Container Security (Non-root Execution)",
+        "API Validation & Hardening",
+        "Runtime Sanity Checks"
+      ],
+      "Blockchain": [
+        "Ethereum Protocol",
+        "JSON-RPC",
+        "Web3j (Protocol Client)",
+        "Transaction Encoding (EIP-4844)",
+        "Wallet Integration (Lightning / NWC)"
+      ],
+      "Languages": ["Java (Protocol-level)", "TypeScript/JS", "Python", "C/C++", "SQL", "Bash"],
+      "Frameworks": ["Node.js", "Express.js", "React/Next.js", "REST APIs", "Spring Boot"],
+      "Databases": ["PostgreSQL", "Redis", "Supabase"],
+      "Tools": ["Git", "Docker", "Kubernetes", "CI/CD & GitHub Actions", "Postman / API Testing"]
     },
     "headshot": {
       "path": "/images/profile.png",
@@ -94,7 +86,7 @@
     }
   ],
   "openSource": {
-    "summary": "I'm deeply involved in the open source ecosystem, focusing on everything from Linux kernel fixes to security automation and blockchain protocol hardening. Here's a look at the organizations where I've contributed real, merged code.",
+    "summary": "I'm deeply involved in the open source infrastructure ecosystem, focusing on everything from Linux kernel fixes to security automation and blockchain protocol hardening. These contributions represent merged code in production systems.",
     "stats": {
       "totalPRs": "70+",
       "mergedPRs": "70+",
