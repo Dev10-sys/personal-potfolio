@@ -4,6 +4,9 @@ import site from "@/data/site.json";
 import { useState } from "react";
 import { Github, Twitter, Linkedin, Mail, ExternalLink, FileText, Terminal, Check } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import dynamic from "next/dynamic";
+
+const Contact3D = dynamic(() => import("./contact-3d").then(mod => mod.Contact3D), { ssr: false });
 
 export function ImportantLinks() {
   const L = site.contact;
@@ -25,7 +28,9 @@ export function ImportantLinks() {
   ].filter(link => link.href);
 
   return (
-    <div className="w-full max-w-6xl mx-auto space-y-12">
+    <div className="relative w-full py-24 overflow-hidden">
+      <Contact3D />
+      <div className="w-full max-w-6xl mx-auto space-y-12 relative z-10 px-4">
       <div className="text-center space-y-4">
         <h2 className="text-4xl font-bold tracking-tight">Social & Resources</h2>
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -89,6 +94,7 @@ export function ImportantLinks() {
             </div>
           </motion.a>
         ))}
+      </div>
       </div>
     </div>
   );

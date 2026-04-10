@@ -1,9 +1,11 @@
 "use client";
 
-import { BitcoinBackground } from "./bitcoin-background"
 import site from "@/data/site.json"
 import { motion } from "framer-motion"
 import { ArrowRight, Github } from "lucide-react"
+import dynamic from "next/dynamic"
+
+const Hero3D = dynamic(() => import("./hero-3d").then(mod => mod.Hero3D), { ssr: false })
 
 export function Hero() {
   const intensity = site.hero?.animationIntensity || "medium"
@@ -12,26 +14,9 @@ export function Hero() {
     density: intensity === "low" ? 40 : intensity === "high" ? 80 : 60,
     speed: intensity === "low" ? 0.2 : intensity === "high" ? 0.4 : 0.3,
   }
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-20">
-      {/* Background with deeper depth and BTC vibe */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(247,147,26,0.15)_0%,_transparent_70%)] opacity-40" />
-        <BitcoinBackground
-          className={`h-full w-full opacity-60`}
-          density={80}
-          speed={0.4}
-          network
-          coins
-          sparkles
-          btcSymbols
-          nodeCount={40}
-          coinCount={15}
-          sparkleCount={40}
-          symbolCount={25}
-        />
-      </div>
+      <Hero3D />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col items-center text-center max-w-[1100px] mx-auto">
@@ -39,19 +24,24 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            className="mb-12 flex flex-col items-center"
+            className="mb-16 flex flex-col items-center"
           >
-            <div className="relative group">
+            <div className="relative group perspective-1000">
               <motion.h1 
                 animate={{ 
-                  textShadow: ["0 0 20px rgba(247,147,26,0)", "0 0 20px rgba(247,147,26,0.5)", "0 0 20px rgba(247,147,26,0)"] 
+                  textShadow: [
+                    "0 0 30px rgba(247,147,26,0)", 
+                    "0 0 50px rgba(247,147,26,0.6)", 
+                    "0 0 30px rgba(247,147,26,0)"
+                  ] 
                 }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="font-black text-7xl md:text-9xl tracking-[0.1em] uppercase text-foreground mb-4 drop-shadow-2xl"
+                className="font-black text-6xl md:text-7xl lg:text-8xl tracking-[0.15em] uppercase text-foreground mb-6 drop-shadow-[0_0_25px_rgba(247,147,26,0.3)] filter-none leading-none select-none"
               >
                 Dev
               </motion.h1>
-              <div className="absolute -inset-x-12 -inset-y-4 bg-primary/20 blur-[80px] -z-10 opacity-50 group-hover:opacity-80 transition-opacity" />
+              <div className="absolute -inset-x-12 -inset-y-6 bg-primary/30 blur-[80px] -z-10 opacity-40 group-hover:opacity-60 transition-all duration-1000" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4/5 h-px bg-gradient-to-r from-transparent via-primary/60 to-transparent blur-[2px] opacity-30" />
             </div>
             
             <motion.div

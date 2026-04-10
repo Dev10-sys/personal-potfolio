@@ -13,12 +13,17 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+
+const Project3D = dynamic(() => import("./project-3d").then(mod => mod.Project3D), { ssr: false });
 
 export function ProjectsPreview() {
   const projects = site.projects || [];
 
   return (
-    <div className="w-full max-w-6xl mx-auto space-y-12">
+    <div className="relative w-full py-24 overflow-hidden">
+      <Project3D />
+      <div className="w-full max-w-6xl mx-auto space-y-12 relative z-10 px-4">
       <div className="text-center space-y-4">
         <h2 className="text-4xl font-bold tracking-tight">Technical Projects</h2>
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -30,9 +35,10 @@ export function ProjectsPreview() {
         {projects.map((project, index) => (
           <Card
             key={index}
-            className="group relative overflow-hidden border-border/60 bg-card transition-all hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/5 p-2"
+            className="group relative overflow-hidden border-border/40 bg-card/60 backdrop-blur-xl transition-all duration-500 hover:border-primary/60 hover:shadow-[0_0_40px_rgba(247,147,26,0.1)] p-0.5"
           >
-            <div className="grid md:grid-cols-5 gap-8 bg-muted/20 rounded-xl p-6 md:p-8">
+            <div className="grid md:grid-cols-5 gap-8 bg-background/40 rounded-[1.8rem] p-6 md:p-10 relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-[1.8rem]" />
               <div className="md:col-span-2 space-y-6">
                  <div>
                     <h3 className="text-2xl font-bold group-hover:text-primary transition-colors mb-2">
@@ -101,6 +107,7 @@ export function ProjectsPreview() {
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
           </Card>
         ))}
+      </div>
       </div>
     </div>
   );

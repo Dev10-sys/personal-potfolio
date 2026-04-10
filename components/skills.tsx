@@ -3,12 +3,17 @@
 import site from "@/data/site.json";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
+
+const Skills3D = dynamic(() => import("./skills-3d").then(mod => mod.Skills3D), { ssr: false });
 
 export function Skills() {
   const skills = site.profile.skills;
 
   return (
-    <div className="w-full max-w-6xl mx-auto space-y-20">
+    <div className="relative w-full py-24 overflow-hidden">
+      <Skills3D />
+      <div className="w-full max-w-6xl mx-auto space-y-20 relative z-10 px-4">
       <div className="text-center space-y-6">
         <h2 className="text-5xl font-bold tracking-tight">Engineering Stack</h2>
         <p className="text-muted-foreground text-xl max-w-3xl mx-auto leading-relaxed">
@@ -44,9 +49,9 @@ export function Skills() {
             viewport={{ once: true }}
           >
             <Card
-              className="group relative h-full border-border/60 bg-card/40 backdrop-blur-xl transition-all duration-500 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-2 rounded-[2rem] overflow-hidden"
+              className="group relative h-full border-border/40 bg-card/40 backdrop-blur-xl transition-all duration-500 hover:border-primary/60 hover:shadow-[0_0_40px_rgba(247,147,26,0.1)] hover:-translate-y-2 rounded-[2rem] overflow-hidden"
             >
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               
               <CardHeader className="pb-6">
                 <CardTitle className="text-2xl font-black flex items-center gap-3">
@@ -69,6 +74,7 @@ export function Skills() {
             </Card>
           </motion.div>
         ))}
+      </div>
       </div>
     </div>
   );
