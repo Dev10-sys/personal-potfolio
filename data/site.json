@@ -33,7 +33,7 @@
       "Tools": ["Git", "Linux", "Terminal", "Supabase", "Docker"]
     },
     "headshot": {
-      "path": "/images/dev.png",
+      "path": "/images/profile.png",
       "alt": "Professional photo of Dev10-sys"
     }
   },
