@@ -46,7 +46,7 @@ export function ImportantLinks() {
             </div>
             <div className="space-y-1">
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground/60">Email</span>
-              <div className="font-bold tracking-tight text-lg">Contact Direct</div>
+              <div className="font-bold tracking-tight text-lg">Contact Dev</div>
             </div>
           </div>
           <AnimatePresence>

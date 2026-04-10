@@ -39,10 +39,13 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="mb-8 px-5 py-2 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-md shadow-lg shadow-primary/5"
+            className="mb-8 flex flex-col items-center"
           >
-            <span className="font-mono text-xs md:text-sm font-bold tracking-[0.4em] uppercase text-primary">
-              {site.hero.tagline}
+            <span className="font-black text-4xl md:text-5xl tracking-[0.2em] uppercase text-foreground mb-4 opacity-90">
+              Dev
+            </span>
+            <span className="font-mono text-[10px] md:text-xs font-bold tracking-[0.4em] uppercase text-primary/60">
+              {site.hero.tagline.replace("Dev — ", "")}
             </span>
           </motion.div>
 

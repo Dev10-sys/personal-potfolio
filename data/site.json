@@ -2,7 +2,7 @@
   "hero": {
     "name": "Dev",
     "role": "Systems & Secure Infrastructure",
-    "tagline": "Systems • Security • Infrastructure",
+    "tagline": "Dev — Systems • Security • Infrastructure",
     "mainHeading": "Building reliable systems and shipping production-grade infrastructure.",
     "subline": "Focused on correctness, security, and real-world impact through open source and protocol-level engineering.",
     "primaryCta": {
@@ -20,7 +20,7 @@
     "education": "System Design & Security Hardening",
     "university": "Medhavi Skills University",
     "shortBio": "I work at the intersection of systems, security, and infrastructure, building software that works under real-world constraints.",
-    "longBio": "I work at the intersection of systems, security, and infrastructure. My focus is on building reliable software that works under real-world constraints — not just in theory. From debugging runtime issues in Linux environments to implementing blockchain protocol features, I prioritize correctness, stability, and production impact. I actively contribute to open source systems like Sugar Labs, OpenSSF, and Hyperledger, working on areas such as runtime safety, secure software distribution, and protocol-level improvements.",
+    "longBio": "I’m Dev — I work at the intersection of systems, security, and infrastructure. My focus is on building reliable software that works under real-world constraints — not just in theory. From debugging runtime issues in Linux environments to implementing blockchain protocol features, I prioritize correctness, stability, and production impact. I actively contribute to open source systems like Sugar Labs, OpenSSF, and Hyperledger, working on areas such as runtime safety, secure software distribution, and protocol-level improvements.",
     "skills": {
       "Systems & Infrastructure": [
         "Linux Systems",

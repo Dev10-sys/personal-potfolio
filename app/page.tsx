@@ -59,7 +59,7 @@ export default function Page() {
             </p>
             <div className="h-px w-24 bg-gradient-to-r from-transparent via-primary/40 to-transparent mx-auto" />
             <p className="text-2xl font-black tracking-tighter uppercase text-muted-foreground/40">
-              — Dev10-sys
+              Built by Dev
             </p>
           </div>
 
@@ -68,9 +68,14 @@ export default function Page() {
               Systems. Security. Infrastructure. <span className="text-[#f7931a] opacity-80">Built with intent.</span>
             </p>
             <p className="text-xs font-mono uppercase tracking-[0.4em] text-muted-foreground/40">
-              © {new Date().getFullYear()} All Rights Reserved
+              © {new Date().getFullYear()} / Dev10-sys
             </p>
           </div>
+        </div>
+
+        {/* Micro Branding Watermark */}
+        <div className="absolute bottom-8 right-8 pointer-events-none opacity-[0.03] blur-[1px]">
+          <span className="text-9xl font-black tracking-tighter select-none">DEV</span>
         </div>
       </footer>
     </main>
