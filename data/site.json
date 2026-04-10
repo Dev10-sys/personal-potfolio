@@ -55,6 +55,21 @@
   },
   "projects": [
     {
+      "title": "NWC Tester",
+      "description": "High-precision protocol debugging laboratory for Nostr Wallet Connect (NWC) and Lightning integrations.",
+      "tech": ["Nostr Protocol", "Lightning Network", "JSON-RPC", "Bitcoin Connect", "Real-time Logging"],
+      "highlights": [
+        "The 'Ultimate Testing Lab' for developers building Nostr-integrated wallets & apps",
+        "Full-spectrum protocol validation for get_balance, pay_invoice, and keysend commands",
+        "Live Execution Console for monitoring real-time relay handshakes and JSON-RPC responses",
+        "Direct wallet onboarding via Bitcoin Connect (Alby) or secure NWC connection strings",
+        "Automated transaction logging for debugging protocol edge cases in production environments"
+      ],
+      "repo": "https://github.com/Dev10-sys/nwc-tester",
+      "live": "https://nwc-tester.vercel.app",
+      "image": { "path": "", "alt": "NWC Tester Laboratory Interface" }
+    },
+    {
       "title": "BTC HashFrame",
       "description": "Built a client-side QR engine so sensitive data never leaves the device.",
       "tech": ["Next.js 15", "TypeScript", "Cryptographic Validation", "Tailwind", "Client-Side Encoding"],
