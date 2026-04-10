@@ -18,7 +18,7 @@
     "education": "B.Tech Computer Science (AI/ML)",
     "university": "Medhavi Skills University",
     "shortBio": "I am a B.Tech Computer Science (AI/ML) student focused on systems engineering, open source contribution, and production-ready software development.",
-    "longBio": "My work spans Bitcoin tooling, AI data infrastructure, distributed systems contributions, and full-stack platforms. I prioritize clean architecture, correctness, and real-world execution over theoretical discussions. I actively contribute to open source projects including SugarLabs, OWASP, CHAOSS, and DBpedia.",
+    "longBio": "I'm a developer who cares about how things work under the hood. Most of my time is spent digging into Bitcoin internals, hardening system security, or contributing to the open source projects that power our digital world. I believe in writing code that is clean, secure, and actually works in production, rather than just talking about theory. I'm currently active in communities like SugarLabs, OpenSSF, and Hyperledger, building tools that make a difference.",
     "skills": {
       "Core Engineering": [
         "Data Structures & Algorithms",
@@ -70,7 +70,7 @@
     }
   ],
   "openSource": {
-    "summary": "I contribute to system-level open source projects across Linux environments, networking infrastructure, security tooling, and distributed systems. My work focuses on reliability, bug fixes, system correctness, and real-world stability improvements.",
+    "summary": "I'm deeply involved in the open source ecosystem, focusing on everything from Linux kernel fixes to security automation and blockchain protocol hardening. Here's a look at the organizations where I've contributed real, merged code.",
     "stats": {
       "totalPRs": "70+",
       "mergedPRs": "70+",
@@ -208,7 +208,7 @@
     "email": "mailto:kalpanagola9897@gmail.com",
     "github": "https://github.com/Dev10-sys",
     "linkedin": "https://linkedin.com/in/dev10-sys",
-    "twitter": "https://x.com/dev"
+    "twitter": "https://x.com/Dev10_sys"
   },
   "seo": {
     "title": "Dev10-sys - Software Developer",

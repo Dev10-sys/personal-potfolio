@@ -21,7 +21,7 @@ export function OpenSourcePreview() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
           <div className="max-w-3xl space-y-4">
             <Badge variant="outline" className="text-primary border-primary/30 bg-primary/5 px-3 py-1">
-              Engineered for the Open Web
+              Building for the Open Web
             </Badge>
             <h2 className="text-5xl md:text-6xl font-bold tracking-tight">
               Open Source <span className="text-primary">Contributor</span>
@@ -143,17 +143,17 @@ export function OpenSourcePreview() {
                   <div className="p-3 bg-primary/10 rounded-2xl">
                     <Github className="h-8 w-8" />
                   </div>
-                  <h3 className="text-3xl font-bold tracking-tight">System Reliability Index</h3>
+                  <h3 className="text-3xl font-bold tracking-tight">Community Contribution Pulse</h3>
                 </div>
                 <p className="max-w-xl text-lg text-muted-foreground leading-relaxed">
-                  A visual audit of continuous deployment and consistency across the global open source grid.
+                  A real-world map of my activity and contributions across the open source repositories I support.
                 </p>
               </div>
               
               <Link href={`https://github.com/${site.contact.github.split("/").pop()}`} target="_blank">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold rounded-2xl px-10 h-14 shadow-lg shadow-primary/20 hover:scale-105 active:scale-95 transition-all">
                   <Users className="h-5 w-5 mr-3" />
-                  Audit Profile
+                  View GitHub
                 </Button>
               </Link>
             </div>
@@ -170,20 +170,20 @@ export function OpenSourcePreview() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12 pt-12 border-t border-border/40">
                <div>
-                  <div className="text-xs uppercase tracking-[0.2em] font-bold text-muted-foreground/60 mb-1">Consistency</div>
-                  <div className="text-xl font-bold">High Precision</div>
+                  <div className="text-xs uppercase tracking-[0.2em] font-bold text-muted-foreground/60 mb-1">Activity State</div>
+                  <div className="text-xl font-bold">Active</div>
                </div>
                <div>
-                  <div className="text-xs uppercase tracking-[0.2em] font-bold text-muted-foreground/60 mb-1">Impact</div>
-                  <div className="text-xl font-bold">Systems Core</div>
+                  <div className="text-xs uppercase tracking-[0.2em] font-bold text-muted-foreground/60 mb-1">Domain Focus</div>
+                  <div className="text-xl font-bold">System Infrastructure</div>
                </div>
                <div>
                   <div className="text-xs uppercase tracking-[0.2em] font-bold text-muted-foreground/60 mb-1">Status</div>
-                  <div className="text-xl font-bold text-green-500">Active</div>
+                  <div className="text-xl font-bold text-green-500">Live</div>
                </div>
                <div>
-                  <div className="text-xs uppercase tracking-[0.2em] font-bold text-muted-foreground/60 mb-1">Trust</div>
-                  <div className="text-xl font-bold">Verified</div>
+                  <div className="text-xs uppercase tracking-[0.2em] font-bold text-muted-foreground/60 mb-1">Validation</div>
+                  <div className="text-xl font-bold">Merged PRs</div>
                </div>
             </div>
           </div>
