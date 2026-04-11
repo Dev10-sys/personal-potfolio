@@ -54,12 +54,7 @@ function BitcoinInfrastructure() {
 }
 
 function TechBackground() {
-  return (
-    <>
-      <Stars radius={100} depth={50} count={5000} factor={6} saturation={0} fade speed={2} />
-      <Sparkles count={100} scale={[20, 20, 20]} size={2} speed={0.5} color="#F7931A" />
-    </>
-  );
+  return null;
 }
 
 function CameraRig() {

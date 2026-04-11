@@ -73,6 +73,7 @@ export const metadata: Metadata = {
 };
 
 import { CursorGlow } from "@/components/cursor-glow";
+import { GlobalBackground } from "@/components/global-background";
 
 export default function RootLayout({
   children,
@@ -82,6 +83,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark scroll-smooth">
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
+        <GlobalBackground />
         <CursorGlow />
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />

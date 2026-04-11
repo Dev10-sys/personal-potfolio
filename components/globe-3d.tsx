@@ -95,7 +95,6 @@ export function Globe3D() {
         <ambientLight intensity={1} />
         <pointLight position={[10, 10, 10]} intensity={3} color="#F7931A" />
         <GlobalNetwork />
-        <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
       </Canvas>
     </div>
   );

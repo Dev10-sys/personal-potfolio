@@ -9,7 +9,7 @@ import { ContactForm } from "@/components/contact-form";
 
 export default function Page() {
   return (
-    <main className="bg-background text-foreground selection:bg-primary/30 selection:text-primary-foreground min-h-screen relative">
+    <main className="bg-transparent text-foreground selection:bg-primary/30 selection:text-primary-foreground min-h-screen relative">
       {/* Global Bitcoin Gradient Atmosphere */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden -z-20">
         <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-[#F7931A]/[0.03] blur-[120px] rounded-full" />
@@ -20,31 +20,31 @@ export default function Page() {
       <Navbar />
       <Hero />
       
-      <section id="about" className="w-full px-4 py-16 md:py-24 border-t border-primary/20 relative">
+      <section id="about" className="w-full px-4 py-16 md:py-24 border-t border-primary/20 relative bg-transparent">
         <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
         <div className="absolute top-0 left-1/4 w-1/2 h-full bg-[#F7931A]/[0.02] blur-[120px] -z-10 pointer-events-none" />
         <About />
       </section>
 
-      <section id="skills" className="w-full px-4 py-16 md:py-24 bg-muted/20 border-t border-primary/20 relative">
+      <section id="skills" className="w-full px-4 py-16 md:py-24 bg-transparent border-t border-primary/20 relative">
         <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#F7931A]/[0.01] to-transparent -z-10 pointer-events-none" />
         <Skills />
       </section>
 
-      <section id="projects" className="w-full px-4 py-16 md:py-24 border-t border-primary/20 relative">
+      <section id="projects" className="w-full px-4 py-16 md:py-24 border-t border-primary/20 relative bg-transparent">
         <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
         <div className="absolute bottom-0 right-1/4 w-1/3 h-1/2 bg-[#F7931A]/[0.03] blur-[100px] -z-10 pointer-events-none" />
         <ProjectsPreview />
       </section>
 
-      <section id="open-source" className="w-full bg-muted/10 border-t border-primary/20 relative">
+      <section id="open-source" className="w-full bg-transparent border-t border-primary/20 relative">
         <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
         <div className="absolute top-1/2 left-0 w-full h-1/2 bg-[#F7931A]/[0.01] blur-[150px] -z-10 pointer-events-none" />
         <OpenSourcePreview />
       </section>
 
-      <section id="contact" className="w-full px-4 py-16 md:py-24 border-t border-primary/20 bg-background relative">
+      <section id="contact" className="w-full px-4 py-16 md:py-24 border-t border-primary/20 bg-transparent relative">
         <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
         <div className="absolute inset-0 bg-radial-gradient from-[#F7931A]/5 to-transparent -z-10 pointer-events-none opacity-20" />
         <div className="space-y-24">
