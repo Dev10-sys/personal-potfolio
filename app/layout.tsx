@@ -44,10 +44,10 @@ export const metadata: Metadata = {
     siteName: "Dev10-sys Portfolio",
     images: [
       {
-        url: "/images/krrishSehgal_tech.png",
+        url: "/images/dev.png",
         width: 1200,
         height: 630,
-        alt: "Krrish Sehgal - Bitcoin Developer Portfolio",
+        alt: "Dev - Engineering Portfolio",
       },
     ],
   },
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     description:
       "Software Developer | GSoC & Summer of Bitcoin Contributor",
     creator: "@Dev10_shadow",
-    images: ["/images/krrishSehgal_tech.png"],
+    images: ["/images/dev.png"],
   },
   robots: {
     index: true,
