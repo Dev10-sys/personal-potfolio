@@ -74,7 +74,7 @@ function DataStream() {
 
 export function Skills3D() {
   return (
-    <div className="absolute inset-0 -z-10 bg-black">
+    <div className="absolute inset-0 -z-10 bg-transparent">
       <Canvas>
         <PerspectiveCamera makeDefault position={[0, 0, 20]} fov={50} />
         <ambientLight intensity={0.5} />

@@ -79,14 +79,13 @@ function SignalLines() {
 
 export function Contact3D() {
   return (
-    <div className="absolute inset-0 -z-10 bg-black">
+    <div className="absolute inset-0 -z-10 bg-transparent">
       <Canvas>
         <PerspectiveCamera makeDefault position={[0, 0, 20]} fov={50} />
         <ambientLight intensity={1} />
         
         <DataCascade />
         <SignalLines />
-        <Stars radius={100} depth={50} count={2000} factor={4} saturation={0} fade speed={1} />
       </Canvas>
     </div>
   );

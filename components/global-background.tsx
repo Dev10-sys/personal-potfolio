@@ -10,17 +10,17 @@ export function GlobalBackground() {
         <Stars 
           radius={100} 
           depth={50} 
-          count={7000} 
+          count={2000} 
           factor={4} 
           saturation={0} 
           fade 
-          speed={1.5} 
+          speed={0.1} 
         />
         <Sparkles 
-          count={150} 
+          count={80} 
           scale={[20, 20, 20]} 
-          size={2} 
-          speed={0.3} 
+          size={1} 
+          speed={0.1} 
           color="#F7931A" 
         />
       </Canvas>

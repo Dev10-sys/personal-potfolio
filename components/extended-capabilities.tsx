@@ -52,19 +52,19 @@ export function ExtendedCapabilities() {
   const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
 
   return (
-    <section ref={containerRef} className="py-24 relative overflow-hidden bg-[#050505]">
+    <section ref={containerRef} className="py-24 relative overflow-hidden">
       {/* Dynamic Background Animation */}
       <motion.div 
         style={{ y, opacity }}
         className="absolute inset-0 z-0 pointer-events-none"
       >
-        <div className="absolute inset-0 opacity-[0.1]" 
+        <div className="absolute inset-0 opacity-[0.05]" 
              style={{ 
                backgroundImage: 'radial-gradient(#f7931a 1px, transparent 1px)', 
-               backgroundSize: '40px 40px' 
+               backgroundSize: '60px 60px' 
              }} 
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#050505] via-transparent to-[#050505]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
       </motion.div>
 
       {/* Animated Scanline */}
@@ -85,15 +85,15 @@ export function ExtendedCapabilities() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {capabilities.map((cap, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1, duration: 0.6, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="group relative h-full flex flex-col p-10 rounded-[2.5rem] bg-[#0a0a0a] border border-white/5 hover:border-primary/40 transition-all duration-700 overflow-hidden"
+              className="group relative w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] min-h-[380px] flex flex-col p-10 rounded-[2.5rem] bg-white/[0.01] backdrop-blur-sm border border-white/5 hover:border-primary/40 transition-all duration-700 overflow-hidden"
             >
               {/* Technical Hover Reveal */}
               <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />

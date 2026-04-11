@@ -89,16 +89,14 @@ function FloatingTech() {
 
 export function Project3D() {
   return (
-    <div className="absolute inset-0 -z-10 bg-[#050505]">
+    <div className="absolute inset-0 -z-10 bg-transparent">
       <Canvas>
         <PerspectiveCamera makeDefault position={[0, 0, 15]} fov={60} />
-        <fog attach="fog" args={["#050505", 10, 40]} />
         <ambientLight intensity={0.5} />
         <pointLight position={[0, 10, 0]} intensity={1.5} color="#F7931A" />
         
         <DigitalGrid />
         <FloatingTech />
-        <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
       </Canvas>
     </div>
   );
