@@ -3,61 +3,65 @@
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { 
-  Terminal, 
-  Search, 
-  Video, 
-  TrendingUp, 
+  FileCode2, 
+  Presentation, 
+  BarChart4, 
   Briefcase, 
-  Rocket,
-  ChevronRight
+  Zap,
+  ChevronRight,
+  Code2
 } from "lucide-react";
 
 const capabilities = [
   {
     title: "Technical Content & Research",
-    description: "Writing deep-dive technical content, documentation, and structured research for systems, security, and blockchain.",
-    icon: Search,
-    color: "from-blue-500/20 to-blue-600/20"
+    description: "Architecting deep-dive technical content, system documentation, and security research for infrastructure and blockchain protocols.",
+    icon: FileCode2,
+    tag: "WRITING"
   },
   {
-    title: "Video Editing & Content Creation",
-    description: "Creating high-quality technical visuals, explainers, and product-focused content.",
-    icon: Video,
-    color: "from-purple-500/20 to-purple-600/20"
+    title: "Technical Visualization",
+    description: "Creating high-fidelity technical visuals and product-focused explainers that bridge the gap between complex systems and clarity.",
+    icon: Presentation,
+    tag: "VISUALS"
   },
   {
-    title: "Growth & Marketing",
-    description: "Understanding product positioning, user acquisition, and early-stage growth strategies.",
-    icon: TrendingUp,
-    color: "from-green-500/20 to-green-600/20"
+    title: "Strategic Growth",
+    description: "Engineering product positioning and user acquisition strategies for early-stage technical products and protocols.",
+    icon: BarChart4,
+    tag: "STRATEGY"
   },
   {
-    title: "Freelance & Independent Work",
-    description: "Available for freelance engineering, technical consulting, and content-driven projects.",
+    title: "Independent Consulting",
+    description: "Providing high-bandwidth technical consulting, freelance engineering, and specialized development for complex stack migrations.",
     icon: Briefcase,
-    color: "from-orange-500/20 to-orange-600/20"
+    tag: "CONSULTING"
   },
   {
-    title: "Startup Exposure",
-    description: "Actively interested in working with early-stage startups, contributing across engineering, product, and growth.",
-    icon: Rocket,
-    color: "from-red-500/20 to-red-600/20"
+    title: "Startup Execution",
+    description: "Driving engineering leadership and product-market fit refinement during critical early-stage startup cycles.",
+    icon: Zap,
+    tag: "EXECUTION"
   }
 ];
 
 export function ExtendedCapabilities() {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-24 relative overflow-hidden bg-black/20">
+      {/* Background patterns */}
+      <div className="absolute inset-0 z-0 opacity-20" 
+           style={{ backgroundImage: 'radial-gradient(#f7931a 0.5px, transparent 0.5px)', backgroundSize: '24px 24px' }} />
+      
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-3xl mb-16 space-y-4">
-          <Badge variant="outline" className="text-primary border-primary/30 bg-primary/5 px-3 py-1">
+        <div className="max-w-4xl mb-20 space-y-6">
+          <Badge variant="outline" className="text-primary border-primary/40 bg-primary/5 px-4 py-1 font-mono tracking-widest text-[10px] uppercase">
             Beyond Engineering
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight">
-            Extended <span className="text-primary">Capabilities</span>
+          <h2 className="text-5xl md:text-7xl font-black tracking-tight text-foreground uppercase italic leading-[0.9]">
+            Extended <span className="text-primary not-italic">Capabilities</span>
           </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed">
-            Beyond core systems engineering, I actively work across technical communication, growth, and execution domains.
+          <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl font-medium">
+            Strategic operations across technical communication, growth, and high-stakes execution domains.
           </p>
         </div>
 
@@ -67,34 +71,50 @@ export function ExtendedCapabilities() {
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1 }}
+              transition={{ delay: i * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
-              className="group relative p-8 rounded-3xl bg-card/40 border border-border/80 hover:border-primary/40 transition-all backdrop-blur-sm overflow-hidden"
+              className="group relative h-full flex flex-col p-8 rounded-[2rem] bg-neutral-900/40 border border-white/5 hover:border-primary/40 transition-all duration-500 backdrop-blur-md overflow-hidden"
             >
-              {/* Technical background pattern */}
-              <div className="absolute top-0 right-0 p-4 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity">
-                <cap.icon className="h-24 w-24" />
+              {/* Card Technical Background */}
+              <div className="absolute inset-0 -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent" />
+                <div className="absolute inset-0" 
+                     style={{ backgroundImage: 'linear-gradient(rgba(247,147,26,0.05) 1px, transparent 1px), linear-gradient(90(rgba(247,147,26,0.05) 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
+              </div>
+
+              <div className="flex items-start justify-between mb-8">
+                <div className="p-4 rounded-2xl bg-white/[0.03] border border-white/5 group-hover:bg-primary/10 group-hover:border-primary/20 transition-all duration-500">
+                  <cap.icon className="h-6 w-6 text-foreground group-hover:text-primary transition-colors duration-500" />
+                </div>
+                <span className="font-mono text-[9px] tracking-[0.3em] text-muted-foreground uppercase opacity-40 group-hover:opacity-100 group-hover:text-primary transition-all">
+                  {cap.tag}
+                </span>
               </div>
               
-              <div className={`inline-flex p-3 rounded-2xl bg-gradient-to-br ${cap.color} border border-white/5 mb-6 group-hover:scale-110 transition-transform`}>
-                <cap.icon className="h-6 w-6 text-foreground" />
-              </div>
-              
-              <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors flex items-center gap-2">
+              <h3 className="text-2xl font-bold mb-4 tracking-tight group-hover:text-primary transition-colors">
                 {cap.title}
-                <ChevronRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
               </h3>
               
-              <p className="text-muted-foreground leading-relaxed text-sm">
+              <p className="text-muted-foreground leading-relaxed text-sm font-medium mb-8 flex-grow">
                 {cap.description}
               </p>
+
+              <div className="flex items-center gap-2 text-[10px] font-mono font-bold tracking-widest text-primary opacity-0 group-hover:opacity-100 transition-all translate-x-4 group-hover:translate-x-0">
+                DETAILS <ChevronRight className="h-3 w-3" />
+              </div>
+
+              {/* Decorative Corner */}
+              <div className="absolute top-0 right-0 p-2 opacity-10 group-hover:opacity-100 transition-opacity">
+                 <Code2 className="h-4 w-4 text-primary/40 group-hover:text-primary transition-colors" />
+              </div>
             </motion.div>
           ))}
         </div>
       </div>
       
-      {/* Background decoration */}
-      <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/10 to-transparent" />
+      {/* Structural Decoration */}
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/5 to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
     </section>
   );
 }

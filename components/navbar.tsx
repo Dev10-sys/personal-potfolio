@@ -27,6 +27,7 @@ export function Navbar({ showNavLinks = true }: NavbarProps) {
     { href: "#skills", label: "Skills" },
     { href: "#projects", label: "Projects" },
     { href: "#open-source", label: "Open Source" },
+    { href: "#extended", label: "Capabilities" },
     { href: "#contact", label: "Contact" },
   ];
 
