@@ -4,6 +4,7 @@ import { About } from "@/components/about";
 import { Skills } from "@/components/skills";
 import { ProjectsPreview } from "@/components/projects-preview";
 import { OpenSourcePreview } from "@/components/open-source-preview";
+import { ExtendedCapabilities } from "@/components/extended-capabilities";
 import { ImportantLinks } from "@/components/links";
 import { ContactForm } from "@/components/contact-form";
 
@@ -44,6 +45,11 @@ export default function Page() {
         <OpenSourcePreview />
       </section>
 
+      <section id="extended" className="w-full bg-transparent border-t border-primary/20 relative">
+        <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+        <ExtendedCapabilities />
+      </section>
+
       <section id="contact" className="w-full px-4 py-16 md:py-24 border-t border-primary/20 bg-transparent relative">
         <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
         <div className="absolute inset-0 bg-radial-gradient from-[#F7931A]/5 to-transparent -z-10 pointer-events-none opacity-20" />
@@ -59,14 +65,22 @@ export default function Page() {
         </div>
 
         <div className="max-w-6xl mx-auto px-4 text-center space-y-12">
-          {/* Availability Badge */}
+          {/* Availability Badge - Refined Tech Visuals */}
           <div className="flex justify-center">
-            <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-md shadow-lg shadow-primary/5">
-              <span className="relative flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+            <div className="inline-flex items-center gap-4 px-8 py-3 rounded-2xl border border-white/5 bg-white/[0.02] backdrop-blur-xl group relative overflow-hidden transition-all hover:bg-white/[0.05] hover:border-primary/40">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+              
+              <div className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+                <div className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-40"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                </div>
+                STATUS: ACTIVE
+              </div>
+              <div className="h-4 w-px bg-white/10" />
+              <span className="text-sm font-bold tracking-tight text-foreground/80 group-hover:text-foreground transition-colors">
+                Open to freelance, contract, and early-stage startup opportunities.
               </span>
-              <span className="text-sm font-bold tracking-wide text-foreground/80">Available for internships & opportunities</span>
             </div>
           </div>
 
