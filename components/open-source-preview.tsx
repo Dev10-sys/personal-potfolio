@@ -132,64 +132,96 @@ export function OpenSourcePreview() {
           ))}
         </div>
 
-        {/* GitHub Heatmap - Tagda Visuals */}
+        {/* GitHub Contribution Terminal - Tagda Visuals */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative group p-1 rounded-[2.5rem] bg-gradient-to-br from-primary/20 via-border/50 to-orange-600/20 shadow-2xl"
+          className="relative group h-full"
         >
-          <div className="bg-card rounded-[2.2rem] p-10 md:p-14 overflow-hidden relative">
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
-            
-            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-12 mb-12">
-              <div className="space-y-4">
-                <div className="flex items-center gap-4 text-primary">
-                  <div className="p-3 bg-primary/10 rounded-2xl">
-                    <Github className="h-8 w-8" />
-                  </div>
-                  <h3 className="text-3xl font-bold tracking-tight">Community Contribution Pulse</h3>
+          {/* Outer technical border/glow */}
+          <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 via-primary/5 to-orange-600/30 rounded-[2.5rem] blur-xl opacity-20 group-hover:opacity-40 transition-opacity" />
+          
+          <div className="relative bg-[#0A0A0A] border border-white/5 rounded-[2.2rem] overflow-hidden shadow-2xl">
+            {/* Terminal Header */}
+            <div className="flex items-center justify-between px-8 py-5 border-b border-white/5 bg-white/[0.02]">
+              <div className="flex items-center gap-6">
+                <div className="flex gap-2">
+                  <div className="w-3 h-3 rounded-full bg-red-500/20 border border-red-500/40" />
+                  <div className="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/40" />
+                  <div className="w-3 h-3 rounded-full bg-green-500/20 border border-green-500/40" />
                 </div>
-                <p className="max-w-xl text-lg text-muted-foreground leading-relaxed">
-                   A real-world map of my activity and contributions across the open source repositories I support.
-                </p>
+                <div className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground/60">
+                  <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                  System Monitoring :: Contribution_Pulse_v2.0
+                </div>
               </div>
-              
-              <Link href={`https://github.com/${site.contact.github.split("/").pop()}`} target="_blank">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold rounded-2xl px-10 h-14 shadow-lg shadow-primary/20 hover:scale-105 active:scale-95 transition-all">
-                  <Users className="h-5 w-5 mr-3" />
-                  View GitHub
-                </Button>
-              </Link>
+              <div className="hidden md:flex items-center gap-4 font-mono text-[10px] text-primary/40">
+                <span>LATENCY: 24ms</span>
+                <span>STATE: DEPLOYED</span>
+              </div>
             </div>
 
-            <div className="relative w-full rounded-2xl bg-muted/20 p-8 border border-border/60 backdrop-blur-md">
-               <img 
-                 src={`https://ghchart.rshah.org/F7931A/${site.contact.github.split("/").pop()}`} 
-                 alt={`${site.hero.name}'s Github Chart`}
-                 className="w-full max-w-5xl mx-auto opacity-100 filter drop-shadow-[0_0_15px_rgba(247,147,26,0.15)] scale-[1.02]"
-               />
-               
-               <div className="absolute inset-0 bg-gradient-to-t from-card/40 via-transparent to-transparent pointer-events-none" />
-            </div>
+            <div className="p-8 md:p-12">
+              <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-12 mb-16">
+                <div className="space-y-6">
+                  <div className="inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-primary/5 border border-primary/20 text-primary">
+                    <Github className="h-5 w-5" />
+                    <span className="text-xs font-bold uppercase tracking-widest">Open Source Infrastructure</span>
+                  </div>
+                  <h3 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">
+                    Contribution Heatmap
+                  </h3>
+                  <p className="max-w-xl text-lg text-muted-foreground/80 leading-relaxed font-light">
+                     A hardware-accelerated trace of repository activity, commit velocity, and merged PR logic across the decentralized web.
+                  </p>
+                </div>
+                
+                <Link href={`https://github.com/${site.contact.github.split("/").pop()}`} target="_blank">
+                  <Button size="lg" className="bg-white text-black hover:bg-primary hover:text-white font-bold rounded-2xl px-10 h-14 transition-all group/btn shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+                    <Users className="h-5 w-5 mr-3" />
+                    Connect Node
+                  </Button>
+                </Link>
+              </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12 pt-12 border-t border-border/40">
-               <div>
-                  <div className="text-xs uppercase tracking-[0.2em] font-bold text-muted-foreground/60 mb-1">Activity State</div>
-                  <div className="text-xl font-bold">Active</div>
-               </div>
-               <div>
-                  <div className="text-xs uppercase tracking-[0.2em] font-bold text-muted-foreground/60 mb-1">Domain Focus</div>
-                  <div className="text-xl font-bold">System Infrastructure</div>
-               </div>
-               <div>
-                  <div className="text-xs uppercase tracking-[0.2em] font-bold text-muted-foreground/60 mb-1">Status</div>
-                  <div className="text-xl font-bold text-green-500">Live</div>
-               </div>
-               <div>
-                  <div className="text-xs uppercase tracking-[0.2em] font-bold text-muted-foreground/60 mb-1">Validation</div>
-                  <div className="text-xl font-bold">Merged PRs</div>
-               </div>
+              {/* Heatmap Container with Scanlines and Grid */}
+              <div className="relative w-full rounded-2xl bg-black/40 p-10 border border-white/5 overflow-hidden group/chart">
+                 {/* Scanline Effect */}
+                 <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.02),rgba(0,255,0,0.01),rgba(0,0,255,0.02))] z-10 bg-[length:100%_4px,3px_100%] opacity-20" />
+                 
+                 <div className="relative z-0">
+                    <img 
+                      src={`https://ghchart.rshah.org/F7931A/${site.contact.github.split("/").pop()}`} 
+                      alt={`${site.hero.name}'s Github Chart`}
+                      className="w-full max-w-5xl mx-auto filter saturate-[1.2] brightness-[1.1] drop-shadow-[0_0_20px_rgba(247,147,26,0.2)]"
+                    />
+                 </div>
+                 
+                 {/* Corner Accents */}
+                 <div className="absolute top-0 left-0 w-8 h-8 border-t border-l border-primary/40 rounded-tl-xl" />
+                 <div className="absolute top-0 right-0 w-8 h-8 border-t border-r border-primary/40 rounded-tr-xl" />
+                 <div className="absolute bottom-0 left-0 w-8 h-8 border-b border-l border-primary/40 rounded-bl-xl" />
+                 <div className="absolute bottom-0 right-0 w-8 h-8 border-b border-r border-primary/40 rounded-br-xl" />
+              </div>
+
+              {/* Metrics Footer */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mt-16 pt-12 border-t border-white/5">
+                 {[
+                   { label: "Activity Index", value: "Verified", color: "text-primary" },
+                   { label: "Deploy Target", value: "Mainnet", color: "text-white" },
+                   { label: "Uptime", value: "99.99%", color: "text-green-500" },
+                   { label: "Logic Flow", value: "Optimized", color: "text-white" }
+                 ].map((metric, i) => (
+                   <div key={i} className="space-y-2">
+                      <div className="flex items-center gap-2">
+                        <div className="w-1 h-1 rounded-full bg-primary/40" />
+                        <div className="text-[10px] font-mono text-muted-foreground uppercase tracking-[0.2em]">{metric.label}</div>
+                      </div>
+                      <div className={`text-xl font-mono font-bold ${metric.color}`}>{metric.value}</div>
+                   </div>
+                 ))}
+              </div>
             </div>
           </div>
         </motion.div>
