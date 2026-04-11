@@ -7,6 +7,7 @@ import * as THREE from "three";
 
 function BitcoinInfrastructure() {
   const meshRef = useRef<THREE.Group>(null);
+  const coreRef = useRef<THREE.Mesh>(null);
   const ring1Ref = useRef<THREE.Mesh>(null);
   const ring2Ref = useRef<THREE.Mesh>(null);
   const ring3Ref = useRef<THREE.Mesh>(null);
@@ -14,40 +15,62 @@ function BitcoinInfrastructure() {
   useFrame((state) => {
     const t = state.clock.getElapsedTime();
     if (meshRef.current) {
-      meshRef.current.rotation.y = t * 0.2;
-      meshRef.current.position.y = Math.sin(t * 0.5) * 0.3;
+      meshRef.current.rotation.y = t * 0.1;
     }
-    if (ring1Ref.current) ring1Ref.current.rotation.z = t * 0.5;
-    if (ring2Ref.current) ring2Ref.current.rotation.x = t * 0.3;
+    if (coreRef.current) {
+      coreRef.current.scale.setScalar(1 + Math.sin(t * 2) * 0.05);
+      coreRef.current.rotation.x = t * 0.5;
+    }
+    if (ring1Ref.current) ring1Ref.current.rotation.z = t * 0.3;
+    if (ring2Ref.current) ring2Ref.current.rotation.x = t * 0.2;
     if (ring3Ref.current) ring3Ref.current.rotation.y = t * 0.4;
   });
 
   return (
     <group ref={meshRef}>
-      <Float speed={5} rotationIntensity={2} floatIntensity={2}>
-        <mesh rotation={[Math.PI / 2, 0, 0]}>
-          <cylinderGeometry args={[2.5, 2.5, 0.5, 64]} />
-          <meshStandardMaterial 
-            color="#F7931A" 
-            metalness={1} 
-            roughness={0.1} 
-            emissive="#F7931A"
-            emissiveIntensity={1.5}
-          />
-        </mesh>
-      </Float>
+      {/* Central Engineering Core - Replaces the bright coin */}
+      <mesh ref={coreRef}>
+        <sphereGeometry args={[2.2, 32, 32]} />
+        <meshStandardMaterial 
+          color="#F7931A" 
+          wireframe 
+          transparent 
+          opacity={0.15}
+          emissive="#F7931A"
+          emissiveIntensity={0.5}
+        />
+      </mesh>
 
+      {/* Inner Heart of the System */}
+      <mesh>
+        <sphereGeometry args={[1.2, 32, 32]} />
+        <meshStandardMaterial 
+          color="#F7931A" 
+          emissive="#F7931A" 
+          emissiveIntensity={2} 
+          transparent 
+          opacity={0.4}
+        />
+      </mesh>
+      
+      {/* Structural Framework */}
+      <mesh rotation={[Math.PI / 2, 0, 0]}>
+        <torusGeometry args={[2.3, 0.01, 16, 100]} />
+        <meshStandardMaterial color="#F7931A" transparent opacity={0.2} />
+      </mesh>
+
+      {/* Defensive Perimeter Rings */}
       <mesh ref={ring1Ref} rotation={[Math.PI / 3, 0, 0]}>
-        <torusGeometry args={[4.5, 0.02, 16, 100]} />
-        <meshStandardMaterial color="#F7931A" emissive="#F7931A" emissiveIntensity={2} />
+        <torusGeometry args={[4.5, 0.01, 16, 100]} />
+        <meshStandardMaterial color="#F7931A" emissive="#F7931A" emissiveIntensity={1} transparent opacity={0.2} />
       </mesh>
       <mesh ref={ring2Ref} rotation={[Math.PI / -3, Math.PI / 4, 0]}>
-        <torusGeometry args={[5.2, 0.02, 16, 100]} />
-        <meshStandardMaterial color="#FFFFFF" emissive="#FFFFFF" emissiveIntensity={1} transparent opacity={0.5} />
+        <torusGeometry args={[5.2, 0.01, 16, 100]} />
+        <meshStandardMaterial color="#FFFFFF" transparent opacity={0.1} />
       </mesh>
       <mesh ref={ring3Ref} rotation={[0, Math.PI / 2, 0]}>
-        <torusGeometry args={[6, 0.03, 16, 100]} />
-        <meshStandardMaterial color="#F7931A" emissive="#F7931A" emissiveIntensity={5} />
+        <torusGeometry args={[6, 0.02, 16, 100]} />
+        <meshStandardMaterial color="#F7931A" emissive="#F7931A" emissiveIntensity={2} transparent opacity={0.3} />
       </mesh>
     </group>
   );
