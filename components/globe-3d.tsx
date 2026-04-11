@@ -89,12 +89,11 @@ function Line({ points }: { points: THREE.Vector3[] }) {
 
 export function Globe3D() {
   return (
-    <div className="absolute inset-0 -z-10 bg-black">
+    <div className="absolute inset-0 z-0 pointer-events-none">
       <Canvas>
         <PerspectiveCamera makeDefault position={[0, 0, 15]} fov={50} />
-        <ambientLight intensity={0.5} />
-        <pointLight position={[10, 10, 10]} intensity={2} color="#F7931A" />
-        
+        <ambientLight intensity={1} />
+        <pointLight position={[10, 10, 10]} intensity={3} color="#F7931A" />
         <GlobalNetwork />
         <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
       </Canvas>
