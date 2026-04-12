@@ -31,8 +31,12 @@ export function Projects() {
         {projects.map((project, index) => (
           <Card
             key={index}
-            className="group relative overflow-hidden border-border bg-card transition-all hover:border-[#F7931A]/50 hover:shadow-lg hover:shadow-[#F7931A]/10"
+            className={`group relative overflow-hidden border-border bg-card transition-all hover:border-[#F7931A]/50 hover:shadow-lg hover:shadow-[#F7931A]/10 flex flex-col h-full ${project.live ? 'cursor-pointer' : ''}`}
           >
+            {project.live && (
+              <a href={project.live} target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-10" />
+            )}
+            <div className="relative z-0 h-full flex flex-col">
             <CardHeader>
               <CardTitle className="group-hover:text-[#F7931A] transition-colors">
                 {project.title}
@@ -54,7 +58,7 @@ export function Projects() {
               </div>
             </CardContent>
 
-            <CardFooter className="gap-2">
+            <CardFooter className="gap-2 relative z-20 mt-auto">
               {project.repo && (
                 <Button
                   variant="outline"
@@ -91,7 +95,8 @@ export function Projects() {
             </CardFooter>
 
             {/* Bitcoin-themed accent */}
-            <div className="absolute top-0 right-0 h-32 w-32 bg-gradient-to-bl from-[#F7931A]/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute top-0 right-0 h-32 w-32 bg-gradient-to-bl from-[#F7931A]/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+            </div>
           </Card>
         ))}
       </div>

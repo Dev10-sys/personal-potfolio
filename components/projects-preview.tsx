@@ -35,8 +35,11 @@ export function ProjectsPreview() {
         {projects.map((project, index) => (
           <Card
             key={index}
-            className="group relative overflow-hidden border-border/40 bg-card/60 backdrop-blur-xl transition-all duration-500 hover:border-primary/60 hover:shadow-[0_0_40px_rgba(247,147,26,0.1)] p-0.5"
+            className={`group relative overflow-hidden border-border/40 bg-card/60 backdrop-blur-xl transition-all duration-500 hover:border-primary/60 hover:shadow-[0_0_40px_rgba(247,147,26,0.1)] p-0.5 ${project.live ? 'cursor-pointer' : ''}`}
           >
+            {project.live && (
+              <Link href={project.live} target="_blank" className="absolute inset-0 z-10" />
+            )}
             <div className="grid md:grid-cols-5 gap-8 bg-background/40 rounded-[1.8rem] p-6 md:p-10 relative">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-[1.8rem]" />
               <div className="md:col-span-2 space-y-6">
@@ -61,7 +64,7 @@ export function ProjectsPreview() {
                     ))}
                  </div>
 
-                 <div className="flex flex-wrap gap-4">
+                 <div className="flex flex-wrap gap-4 relative z-20">
                     {project.repo && (
                       <Button
                         variant="outline"

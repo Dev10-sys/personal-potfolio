@@ -106,15 +106,43 @@ export function OpenSourcePreview() {
                       "{org.impact}"
                     </p>
                     
-                    <div className="space-y-3">
-                      <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground/60 block">Key Modules</span>
-                      <div className="flex flex-wrap gap-2">
-                        {org.contributions.slice(0, 3).map((cont, i) => (
-                          <div key={i} className="px-3 py-1.5 rounded-lg bg-muted/50 border border-border/40 text-[11px] font-medium text-foreground/80 group-hover:border-primary/20 group-hover:bg-background transition-all">
-                            {cont}
-                          </div>
-                        ))}
+                    <div className="space-y-4">
+                      <div className="space-y-3">
+                        <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground/60 block">Key Modules</span>
+                        <div className="flex flex-wrap gap-2">
+                          {org.contributions.slice(0, 3).map((cont, i) => (
+                            <div key={i} className="px-3 py-1.5 rounded-lg bg-muted/50 border border-border/40 text-[11px] font-medium text-foreground/80 group-hover:border-primary/20 group-hover:bg-background transition-all whitespace-nowrap overflow-hidden text-ellipsis max-w-full">
+                              {cont}
+                            </div>
+                          ))}
+                        </div>
                       </div>
+                      
+                      {org.links && org.links.length > 0 && (
+                        <div className="space-y-3 relative z-20">
+                          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary block">Pull Requests</span>
+                          <div className="flex flex-wrap gap-2">
+                            {org.links.slice(0, 4).map((link, i) => {
+                              const prNumber = link.split('/').pop();
+                              return (
+                                <Link key={i} href={link} target="_blank" onClick={(e) => e.stopPropagation()}>
+                                  <Badge variant="outline" className="bg-primary/5 hover:bg-primary/20 text-primary border-primary/20 hover:border-primary/50 flex items-center gap-1 transition-all cursor-pointer">
+                                    <GitPullRequest className="h-3 w-3" />
+                                    #{prNumber}
+                                  </Badge>
+                                </Link>
+                              );
+                            })}
+                            {org.links.length > 4 && (
+                              <Link href={org.link} target="_blank" onClick={(e) => e.stopPropagation()}>
+                                <Badge variant="outline" className="bg-muted/50 hover:bg-muted text-muted-foreground border-border/40 hover:border-border flex items-center gap-1 transition-all cursor-pointer">
+                                  +{org.links.length - 4} more
+                                </Badge>
+                              </Link>
+                            )}
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </CardContent>
                   
