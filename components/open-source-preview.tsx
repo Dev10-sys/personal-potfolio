@@ -102,8 +102,8 @@ export function OpenSourcePreview() {
                   )}
 
                   <CardHeader className="pb-4">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="h-12 w-12 rounded-xl bg-muted/50 flex items-center justify-center font-bold text-lg transition-colors overflow-hidden border border-border/40">
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="h-20 w-20 rounded-2xl bg-muted/50 flex items-center justify-center font-bold text-xl transition-colors overflow-hidden border border-border/40 shrink-0">
                         {(() => {
                            const repoUrlMatch = org.link.match(/github\.com\/([^\/]+)/);
                            const orgId = repoUrlMatch ? repoUrlMatch[1] : null;
@@ -120,6 +120,15 @@ export function OpenSourcePreview() {
                     </div>
                     <CardTitle className="text-2xl font-bold group-hover:text-primary transition-colors">{org.name}</CardTitle>
                     <CardDescription className="text-sm font-medium text-primary/70">{org.tagline}</CardDescription>
+                    {org.tech && org.tech.length > 0 && (
+                      <div className="flex flex-wrap gap-2 mt-4">
+                        {org.tech.map((t: string, i: number) => (
+                          <Badge key={i} variant="secondary" className="bg-white/5 text-white/80 hover:bg-white/10 hover:text-white text-[10px] uppercase tracking-wider px-2.5 py-0.5 border-white/10 transition-colors">
+                            {t}
+                          </Badge>
+                        ))}
+                      </div>
+                    )}
                   </CardHeader>
                   
                   <CardContent className="flex-grow space-y-6">

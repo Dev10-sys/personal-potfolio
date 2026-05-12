@@ -120,7 +120,8 @@
           "Modal handling improvements in ActivityChooser"
         ],
         "impact": "Improved system stability, input reliability, and UI behavior across core desktop components.",
-        "link": "https://github.com/sugarlabs/sugar/pulls?q=is%3Apr+author%3ADev10-sys+-is%3Aunmerged"
+        "tech": ["Python", "GTK", "D-Bus"],
+        "link": "https://github.com/sugarlabs/sugar/pulls?q=is%3Apr+author%3ADev10-sys+%28is%3Aopen+OR+is%3Amerged%29"
       },
       {
         "name": "OpenSSF (RSTUF)",
@@ -142,7 +143,8 @@
           "https://github.com/repository-service-tuf/helm-charts/pull/57",
           "https://github.com/repository-service-tuf/helm-charts/pull/56"
         ],
-        "link": "https://github.com/repository-service-tuf/repository-service-tuf/pulls?q=is%3Apr+author%3ADev10-sys+-is%3Aunmerged"
+        "tech": ["Python", "Docker", "Security"],
+        "link": "https://github.com/repository-service-tuf/repository-service-tuf/pulls?q=is%3Apr+author%3ADev10-sys+%28is%3Aopen+OR+is%3Amerged%29"
       },
       {
         "name": "Web3j (LFDT)",
@@ -159,7 +161,8 @@
           "https://github.com/LFDT-web3j/web3j/pull/2255",
           "https://github.com/LFDT-web3j/web3j/pull/2254"
         ],
-        "link": "https://github.com/LFDT-web3j/web3j/pulls?q=is%3Apr+author%3ADev10-sys+-is%3Aunmerged"
+        "tech": ["Java", "Ethereum", "EIP-4844"],
+        "link": "https://github.com/LFDT-web3j/web3j/pulls?q=is%3Apr+author%3ADev10-sys+%28is%3Aopen+OR+is%3Amerged%29"
       },
       {
         "name": "Hyperledger Cacti",
@@ -179,7 +182,8 @@
           "https://github.com/hyperledger-cacti/cacti/pull/4179",
           "https://github.com/hyperledger-cacti/cacti/pull/4176"
         ],
-        "link": "https://github.com/hyperledger-cacti/cacti/pulls?q=is%3Apr+author%3ADev10-sys+-is%3Aunmerged"
+        "tech": ["TypeScript", "Docker", "Blockchain"],
+        "link": "https://github.com/hyperledger-cacti/cacti/pulls?q=is%3Apr+author%3ADev10-sys+%28is%3Aopen+OR+is%3Amerged%29"
       },
       {
         "name": "SONiC",
@@ -194,7 +198,8 @@
           "https://github.com/sonic-net/sonic-mgmt/pull/23181",
           "https://github.com/sonic-net/sonic-mgmt/pull/23171"
         ],
-        "link": "https://github.com/sonic-net/sonic-mgmt/pulls?q=is%3Apr+author%3ADev10-sys+-is%3Aunmerged"
+        "tech": ["Python", "IPv6", "Networking"],
+        "link": "https://github.com/sonic-net/sonic-mgmt/pulls?q=is%3Apr+author%3ADev10-sys+%28is%3Aopen+OR+is%3Amerged%29"
       },
       {
         "name": "Chicago Pediatric Cancer Data Commons",
@@ -209,7 +214,8 @@
           "https://github.com/chicagopcdc/Automated-Matching-of-Patients-to-Clinical-Trials/pull/4",
           "https://github.com/chicagopcdc/Automated-Matching-of-Patients-to-Clinical-Trials/pull/3"
         ],
-        "link": "https://github.com/chicagopcdc/Automated-Matching-of-Patients-to-Clinical-Trials/pulls?q=is%3Apr+author%3ADev10-sys+-is%3Aunmerged"
+        "tech": ["Python", "Jupyter", "Machine Learning"],
+        "link": "https://github.com/chicagopcdc/Automated-Matching-of-Patients-to-Clinical-Trials/pulls?q=is%3Apr+author%3ADev10-sys+%28is%3Aopen+OR+is%3Amerged%29"
       },
       {
         "name": "CHAOSS",
@@ -225,7 +231,8 @@
           "https://github.com/chaoss/grimoirelab-perceval/pull/885",
           "https://github.com/chaoss/community/pull/765"
         ],
-        "link": "https://github.com/chaoss/grimoirelab-perceval/pulls?q=is%3Apr+author%3ADev10-sys+-is%3Aunmerged"
+        "tech": ["Python", "Data Analytics", "API"],
+        "link": "https://github.com/chaoss/grimoirelab-perceval/pulls?q=is%3Apr+author%3ADev10-sys+%28is%3Aopen+OR+is%3Amerged%29"
       }
     ]
   },
