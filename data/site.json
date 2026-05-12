@@ -102,12 +102,27 @@
   "openSource": {
     "summary": "I contribute to open source systems that are actually used in production.",
     "stats": {
-      "totalPRs": "70+",
-      "mergedPRs": "70+",
-      "orgs": "10+",
+      "totalPRs": "100+",
+      "mergedPRs": "100+",
+      "orgs": "11+",
       "languages": ["Go", "Python", "TypeScript", "JavaScript"]
     },
     "organizations": [
+      {
+        "name": "Hyperledger Identus",
+        "tagline": "Enterprise SSI and Verifiable Credentials SDK",
+        "role": "Contributor",
+        "contributions": [
+          "Fixed runtime errors in DIDComm invitation tests",
+          "Corrected UUID module resolution for strict ES imports"
+        ],
+        "impact": "Restored test suite stability for OutOfBandInvitation flows in the TypeScript SDK.",
+        "tech": ["TypeScript", "SSI", "DIDComm"],
+        "links": [
+          "https://github.com/hyperledger-identus/sdk-ts/pull/591"
+        ],
+        "link": "https://github.com/hyperledger-identus/sdk-ts/pulls?q=is%3Apr+author%3ADev10-sys+%28is%3Aopen+OR+is%3Amerged%29"
+      },
       {
         "name": "SugarLabs",
         "tagline": "Linux Desktop Environment – Python / GTK",

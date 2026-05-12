@@ -92,9 +92,9 @@ export function Hero() {
               <div className="relative flex items-center justify-center w-16 h-16 shrink-0">
                 <div className="absolute inset-0 bg-white/10 rounded-full blur-md animate-pulse"></div>
                 <img 
-                  src="/gsoc_logo.png" 
+                  src="https://developers.google.com/open-source/gsoc/resources/downloads/GSoC-icon-192.png" 
                   alt="GSoC Logo" 
-                  className="w-16 h-16 object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.5)] animate-[spin_8s_linear_infinite] group-hover:animate-[spin_4s_linear_infinite]" 
+                  className="w-16 h-16 object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.5)] animate-[spin_8s_linear_infinite] group-hover:animate-[spin_4s_linear_infinite] brightness-125 contrast-125" 
                 />
               </div>
               

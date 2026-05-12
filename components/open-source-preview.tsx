@@ -48,13 +48,12 @@ export function OpenSourcePreview() {
         </div>
 
         {/* Stats Grid - High Impact */}
-        <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 mb-20">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
           {[
             { label: "GSoC 2026", value: "1x", icon: Trophy, color: "text-[#F7931A]", badge: "Sugar Labs" },
             { label: "Total Contributions", value: openSource.stats.totalPRs, icon: Trophy, color: "text-primary" },
             { label: "Accepted PRs", value: openSource.stats.mergedPRs, icon: GitPullRequest, color: "text-green-500" },
             { label: "Organizations", value: openSource.stats.orgs, icon: Globe, color: "text-blue-500" },
-            { label: "Tech Stack", value: openSource.stats.languages.length, icon: Code2, color: "text-orange-500" },
           ].map((stat, i) => (
             <motion.div
               key={i}
@@ -88,30 +87,8 @@ export function OpenSourcePreview() {
             >
               <Card className="h-full flex flex-col border-border/40 bg-card/60 backdrop-blur-xl hover:bg-card hover:border-primary/60 hover:shadow-[0_0_40px_rgba(247,147,26,0.1)] transition-all duration-500 hover:-translate-y-2 group relative overflow-hidden p-0.5">
                 <div className="bg-background/40 rounded-[1.8rem] flex flex-col h-full relative overflow-hidden p-6 mt-4">
-                  <div className="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <Zap className="h-5 w-5 text-primary/40 animate-pulse" />
-                  </div>
-                  
-                  {org.name === "SugarLabs" && (
-                    <div className="absolute -top-6 right-6 z-30 group/badge hover:scale-110 transition-transform cursor-pointer">
-                      <div className="flex items-center gap-3 bg-black/90 border border-[#F7931A]/40 text-white px-5 py-2.5 rounded-2xl shadow-[0_0_30px_rgba(247,147,26,0.3)] backdrop-blur-xl relative overflow-hidden">
-                        <div className="absolute inset-0 bg-[#F7931A]/10 animate-pulse"></div>
-                        
-                        <div className="relative w-8 h-8 flex items-center justify-center shrink-0">
-                          <div className="absolute inset-0 bg-white/5 rounded-full blur-sm animate-pulse"></div>
-                          <img src="/gsoc_logo.png" className="w-8 h-8 object-contain drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] animate-[spin_6s_linear_infinite]" />
-                        </div>
-                        
-                        <div className="flex flex-col text-left relative z-10">
-                          <span className="text-[9px] font-mono text-[#F7931A] uppercase tracking-widest leading-none mb-0.5">Official</span>
-                          <span className="text-xs font-black uppercase tracking-wide leading-none drop-shadow-md">GSoC '26</span>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-
                   <CardHeader className="pb-4">
-                    <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-start justify-between mb-4 relative">
                       <div className="h-20 w-20 rounded-2xl bg-muted/50 flex items-center justify-center font-bold text-xl transition-colors overflow-hidden border border-border/40 shrink-0">
                         {(() => {
                            const repoUrlMatch = org.link.match(/github\.com\/([^\/]+)/);
@@ -123,9 +100,22 @@ export function OpenSourcePreview() {
                            );
                         })()}
                       </div>
-                      <Link href={org.link} target="_blank" className="p-2 rounded-full hover:bg-muted transition-colors text-muted-foreground hover:text-primary">
-                        <Github className="h-5 w-5" />
-                      </Link>
+                      <div className="flex items-center gap-3 relative z-30">
+                        {org.name === "SugarLabs" && (
+                          <div className="group/badge hover:scale-110 transition-transform cursor-pointer">
+                            <div className="flex items-center gap-2 bg-black/90 border border-[#F7931A]/40 text-white px-3 py-1.5 rounded-xl shadow-[0_0_20px_rgba(247,147,26,0.2)] backdrop-blur-xl relative overflow-hidden">
+                              <div className="absolute inset-0 bg-[#F7931A]/10 animate-pulse"></div>
+                              <div className="relative w-6 h-6 flex items-center justify-center shrink-0">
+                                <img src="https://developers.google.com/open-source/gsoc/resources/downloads/GSoC-icon-192.png" className="w-6 h-6 object-contain drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] animate-[spin_6s_linear_infinite] brightness-125 contrast-125" />
+                              </div>
+                              <span className="text-[10px] font-black uppercase tracking-wide leading-none drop-shadow-md pr-1">GSoC '26</span>
+                            </div>
+                          </div>
+                        )}
+                        <Link href={org.link} target="_blank" className="p-2 rounded-full hover:bg-muted transition-colors text-muted-foreground hover:text-primary z-30 relative">
+                          <Github className="h-5 w-5" />
+                        </Link>
+                      </div>
                     </div>
                     <CardTitle className="text-2xl font-bold group-hover:text-primary transition-colors">{org.name}</CardTitle>
                     <CardDescription className="text-sm font-medium text-primary/70">{org.tagline}</CardDescription>
