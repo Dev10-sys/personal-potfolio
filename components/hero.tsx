@@ -85,20 +85,29 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.6 }}
             className="mb-14 relative group inline-flex items-center justify-center cursor-pointer hover:scale-[1.02] active:scale-95 transition-all"
           >
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-[#EA4335] via-[#FBBC05] to-[#34A853] rounded-2xl blur opacity-30 group-hover:opacity-80 transition duration-1000 animate-pulse"></div>
-            <div className="relative flex items-center gap-4 bg-black/80 border border-white/10 backdrop-blur-xl px-6 py-3 rounded-xl overflow-hidden shadow-[0_0_25px_rgba(255,255,255,0.05)]">
+            <div className="absolute -inset-1 bg-gradient-to-r from-[#EA4335] via-[#FBBC05] to-[#34A853] rounded-3xl blur-lg opacity-40 group-hover:opacity-80 transition duration-1000 animate-pulse"></div>
+            <div className="relative flex items-center gap-6 bg-black/90 border border-white/20 backdrop-blur-2xl px-10 py-5 rounded-2xl overflow-hidden shadow-[0_0_40px_rgba(255,255,255,0.1)]">
               <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[length:100%_4px] opacity-20" />
-              <div className="flex items-center gap-3 relative z-10">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/GSoC_logo.svg" alt="GSoC Logo" className="w-7 h-7 object-contain drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]" />
-                <div className="h-6 w-px bg-white/20" />
-                <div className="flex flex-col text-left">
-                  <span className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest leading-none mb-1 flex items-center gap-2">
-                    Official Contributor <ExternalLink className="w-2.5 h-2.5 inline-block opacity-50" />
-                  </span>
-                  <span className="text-sm font-bold text-white leading-none tracking-wide">
-                    GSOC'26 <span className="text-[#F7931A] mx-1">•</span> Sugar Labs
-                  </span>
-                </div>
+              
+              {/* Rotating glowing background for the logo */}
+              <div className="relative flex items-center justify-center w-16 h-16 shrink-0">
+                <div className="absolute inset-0 bg-white/10 rounded-full blur-md animate-pulse"></div>
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/8/85/GSoC_logo.svg" 
+                  alt="GSoC Logo" 
+                  className="w-16 h-16 object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.5)] animate-[spin_8s_linear_infinite] group-hover:animate-[spin_4s_linear_infinite]" 
+                />
+              </div>
+              
+              <div className="h-12 w-px bg-white/20" />
+              
+              <div className="flex flex-col text-left relative z-10">
+                <span className="text-xs font-mono text-white/70 uppercase tracking-[0.25em] leading-none mb-2 flex items-center gap-2">
+                  Official Contributor <ExternalLink className="w-3 h-3 inline-block opacity-70" />
+                </span>
+                <span className="text-xl md:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/70 leading-none tracking-wide">
+                  GSoC '26 <span className="text-[#F7931A] mx-2">•</span> Sugar Labs
+                </span>
               </div>
             </div>
           </motion.a>

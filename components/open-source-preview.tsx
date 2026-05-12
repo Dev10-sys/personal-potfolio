@@ -93,10 +93,19 @@ export function OpenSourcePreview() {
                   </div>
                   
                   {org.name === "SugarLabs" && (
-                    <div className="absolute -top-1 right-6 z-20 translate-y-[-50%]">
-                      <div className="flex items-center gap-2 bg-[#F7931A] text-black px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-[0_0_20px_rgba(247,147,26,0.6)] animate-pulse">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/GSoC_logo.svg" className="w-4 h-4 object-contain" />
-                        GSoC '26
+                    <div className="absolute -top-6 right-6 z-30 group/badge hover:scale-110 transition-transform cursor-pointer">
+                      <div className="flex items-center gap-3 bg-black/90 border border-[#F7931A]/40 text-white px-5 py-2.5 rounded-2xl shadow-[0_0_30px_rgba(247,147,26,0.3)] backdrop-blur-xl relative overflow-hidden">
+                        <div className="absolute inset-0 bg-[#F7931A]/10 animate-pulse"></div>
+                        
+                        <div className="relative w-8 h-8 flex items-center justify-center shrink-0">
+                          <div className="absolute inset-0 bg-white/5 rounded-full blur-sm animate-pulse"></div>
+                          <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/GSoC_logo.svg" className="w-8 h-8 object-contain drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] animate-[spin_6s_linear_infinite]" />
+                        </div>
+                        
+                        <div className="flex flex-col text-left relative z-10">
+                          <span className="text-[9px] font-mono text-[#F7931A] uppercase tracking-widest leading-none mb-0.5">Official</span>
+                          <span className="text-xs font-black uppercase tracking-wide leading-none drop-shadow-md">GSoC '26</span>
+                        </div>
                       </div>
                     </div>
                   )}
