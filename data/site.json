@@ -25,7 +25,7 @@
         "Linux Systems",
         "Wayland / X11",
         "D-Bus",
-        "GTK (Used in Sugar Labs)",
+        "GTK (Linux GUI toolkit)",
         "CLI Tools & Parsing",
         "Execution Engines / Schedulers"
       ],
