@@ -89,11 +89,10 @@ export function Hero() {
             <div className="relative flex items-center gap-6 bg-black/90 border border-white/20 backdrop-blur-2xl px-10 py-5 rounded-2xl overflow-hidden shadow-[0_0_40px_rgba(255,255,255,0.1)]">
               <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[length:100%_4px] opacity-20" />
               
-              {/* Rotating glowing background for the logo */}
               <div className="relative flex items-center justify-center w-16 h-16 shrink-0">
                 <div className="absolute inset-0 bg-white/10 rounded-full blur-md animate-pulse"></div>
                 <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/8/85/GSoC_logo.svg" 
+                  src="/gsoc_logo.png" 
                   alt="GSoC Logo" 
                   className="w-16 h-16 object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.5)] animate-[spin_8s_linear_infinite] group-hover:animate-[spin_4s_linear_infinite]" 
                 />

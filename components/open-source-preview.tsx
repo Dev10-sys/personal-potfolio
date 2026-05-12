@@ -99,7 +99,7 @@ export function OpenSourcePreview() {
                         
                         <div className="relative w-8 h-8 flex items-center justify-center shrink-0">
                           <div className="absolute inset-0 bg-white/5 rounded-full blur-sm animate-pulse"></div>
-                          <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/GSoC_logo.svg" className="w-8 h-8 object-contain drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] animate-[spin_6s_linear_infinite]" />
+                          <img src="/gsoc_logo.png" className="w-8 h-8 object-contain drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] animate-[spin_6s_linear_infinite]" />
                         </div>
                         
                         <div className="flex flex-col text-left relative z-10">
