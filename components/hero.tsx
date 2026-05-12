@@ -71,10 +71,34 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.5 }}
-            className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mb-14 font-medium"
+            className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mb-10 font-medium"
           >
             {site.hero.subline}
           </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.6 }}
+            className="mb-14 relative group inline-flex items-center justify-center cursor-default"
+          >
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-[#EA4335] via-[#FBBC05] to-[#34A853] rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-1000 animate-pulse"></div>
+            <div className="relative flex items-center gap-4 bg-black/80 border border-white/10 backdrop-blur-xl px-6 py-3 rounded-xl overflow-hidden">
+              <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[length:100%_4px] opacity-20" />
+              <div className="flex items-center gap-3 relative z-10">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/GSoC_logo.svg" alt="GSoC Logo" className="w-7 h-7 object-contain drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]" />
+                <div className="h-6 w-px bg-white/20" />
+                <div className="flex flex-col text-left">
+                  <span className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest leading-none mb-1">
+                    Official Contributor
+                  </span>
+                  <span className="text-sm font-bold text-white leading-none tracking-wide">
+                    GSOC'26 <span className="text-[#F7931A] mx-1">•</span> Sugar Labs
+                  </span>
+                </div>
+              </div>
+            </div>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}

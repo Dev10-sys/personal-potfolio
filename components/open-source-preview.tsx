@@ -48,11 +48,12 @@ export function OpenSourcePreview() {
         </div>
 
         {/* Stats Grid - High Impact */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 mb-20">
           {[
+            { label: "GSoC 2026", value: "1x", icon: Trophy, color: "text-[#F7931A]", badge: "Sugar Labs" },
             { label: "Total Contributions", value: openSource.stats.totalPRs, icon: Trophy, color: "text-primary" },
             { label: "Accepted PRs", value: openSource.stats.mergedPRs, icon: GitPullRequest, color: "text-green-500" },
-            { label: "Impacted Organizations", value: openSource.stats.orgs, icon: Globe, color: "text-blue-500" },
+            { label: "Organizations", value: openSource.stats.orgs, icon: Globe, color: "text-blue-500" },
             { label: "Tech Stack", value: openSource.stats.languages.length, icon: Code2, color: "text-orange-500" },
           ].map((stat, i) => (
             <motion.div
@@ -66,7 +67,10 @@ export function OpenSourcePreview() {
               <div className="absolute top-4 right-4 opacity-10 group-hover:opacity-20 transition-opacity">
                 <stat.icon className={`h-12 w-12 ${stat.color}`} />
               </div>
-              <div className="text-4xl font-bold tracking-tight mb-2">{stat.value}</div>
+              <div className="text-4xl font-bold tracking-tight mb-2 flex items-baseline gap-2">
+                {stat.value}
+                {stat.badge && <span className="text-xs font-mono text-muted-foreground uppercase tracking-widest">{stat.badge}</span>}
+              </div>
               <div className="text-sm font-semibold uppercase tracking-widest text-muted-foreground">{stat.label}</div>
             </motion.div>
           ))}
@@ -83,15 +87,32 @@ export function OpenSourcePreview() {
               viewport={{ once: true }}
             >
               <Card className="h-full flex flex-col border-border/40 bg-card/60 backdrop-blur-xl hover:bg-card hover:border-primary/60 hover:shadow-[0_0_40px_rgba(247,147,26,0.1)] transition-all duration-500 hover:-translate-y-2 group relative overflow-hidden p-0.5">
-                <div className="bg-background/40 rounded-[1.8rem] flex flex-col h-full relative overflow-hidden p-6">
+                <div className="bg-background/40 rounded-[1.8rem] flex flex-col h-full relative overflow-hidden p-6 mt-4">
                   <div className="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity">
                     <Zap className="h-5 w-5 text-primary/40 animate-pulse" />
                   </div>
                   
+                  {org.name === "SugarLabs" && (
+                    <div className="absolute -top-1 right-6 z-20 translate-y-[-50%]">
+                      <div className="flex items-center gap-2 bg-[#F7931A] text-black px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-[0_0_20px_rgba(247,147,26,0.6)] animate-pulse">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/GSoC_logo.svg" className="w-4 h-4 object-contain" />
+                        GSoC '26
+                      </div>
+                    </div>
+                  )}
+
                   <CardHeader className="pb-4">
                     <div className="flex items-center justify-between mb-4">
-                      <div className="h-12 w-12 rounded-xl bg-muted flex items-center justify-center font-bold text-lg group-hover:bg-primary/10 group-hover:text-primary transition-colors">
-                        {org.name.charAt(0)}
+                      <div className="h-12 w-12 rounded-xl bg-muted/50 flex items-center justify-center font-bold text-lg transition-colors overflow-hidden border border-border/40">
+                        {(() => {
+                           const repoUrlMatch = org.link.match(/github\.com\/([^\/]+)/);
+                           const orgId = repoUrlMatch ? repoUrlMatch[1] : null;
+                           return orgId ? (
+                             <img src={`https://github.com/${orgId}.png`} alt={org.name} className="w-full h-full object-cover" />
+                           ) : (
+                             org.name.charAt(0)
+                           );
+                        })()}
                       </div>
                       <Link href={org.link} target="_blank" className="p-2 rounded-full hover:bg-muted transition-colors text-muted-foreground hover:text-primary">
                         <Github className="h-5 w-5" />

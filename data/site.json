@@ -18,9 +18,8 @@
   "profile": {
     "location": "Bangalore, India",
     "education": "System Design & Security Hardening",
-    "university": "Medhavi Skills University",
-    "shortBio": "I work on systems where failure actually matters.",
-    "longBio": "I work on systems where failure actually matters. Most of my work is around reliability, security, and infrastructure. I prioritize correctness, stability, and production impact in everything I build. I actively contribute to open source systems like Sugar Labs, OpenSSF, and Hyperledger, working on areas such as runtime safety, secure software distribution, and protocol-level improvements.",
+    "shortBio": "I am Dev, a B.Tech CS undergraduate with specialization in AI/ML.",
+    "longBio": "I work across web development, blockchain systems, machine learning, and infrastructure engineering with a strong focus on reliability and production-grade systems. Official Google Summer of Code 2026 Contributor at Sugar Labs.",
     "skills": {
       "Systems & Infrastructure": [
         "Linux Systems",
@@ -121,7 +120,7 @@
           "Modal handling improvements in ActivityChooser"
         ],
         "impact": "Improved system stability, input reliability, and UI behavior across core desktop components.",
-        "link": "https://github.com/sugarlabs/sugar/pulls?q=author%3ADev10-sys"
+        "link": "https://github.com/sugarlabs/sugar/pulls?q=is%3Apr+author%3ADev10-sys+-is%3Aunmerged"
       },
       {
         "name": "OpenSSF (RSTUF)",
@@ -143,7 +142,7 @@
           "https://github.com/repository-service-tuf/helm-charts/pull/57",
           "https://github.com/repository-service-tuf/helm-charts/pull/56"
         ],
-        "link": "https://github.com/repository-service-tuf/repository-service-tuf/pulls?q=author%3ADev10-sys"
+        "link": "https://github.com/repository-service-tuf/repository-service-tuf/pulls?q=is%3Apr+author%3ADev10-sys+-is%3Aunmerged"
       },
       {
         "name": "Web3j (LFDT)",
@@ -160,7 +159,7 @@
           "https://github.com/LFDT-web3j/web3j/pull/2255",
           "https://github.com/LFDT-web3j/web3j/pull/2254"
         ],
-        "link": "https://github.com/LFDT-web3j/web3j/pulls?q=author%3ADev10-sys"
+        "link": "https://github.com/LFDT-web3j/web3j/pulls?q=is%3Apr+author%3ADev10-sys+-is%3Aunmerged"
       },
       {
         "name": "Hyperledger Cacti",
@@ -180,7 +179,7 @@
           "https://github.com/hyperledger-cacti/cacti/pull/4179",
           "https://github.com/hyperledger-cacti/cacti/pull/4176"
         ],
-        "link": "https://github.com/hyperledger-cacti/cacti/pulls?q=author%3ADev10-sys"
+        "link": "https://github.com/hyperledger-cacti/cacti/pulls?q=is%3Apr+author%3ADev10-sys+-is%3Aunmerged"
       },
       {
         "name": "SONiC",
@@ -195,7 +194,7 @@
           "https://github.com/sonic-net/sonic-mgmt/pull/23181",
           "https://github.com/sonic-net/sonic-mgmt/pull/23171"
         ],
-        "link": "https://github.com/sonic-net/sonic-mgmt/pulls?q=author%3ADev10-sys"
+        "link": "https://github.com/sonic-net/sonic-mgmt/pulls?q=is%3Apr+author%3ADev10-sys+-is%3Aunmerged"
       },
       {
         "name": "Chicago Pediatric Cancer Data Commons",
@@ -210,18 +209,7 @@
           "https://github.com/chicagopcdc/Automated-Matching-of-Patients-to-Clinical-Trials/pull/4",
           "https://github.com/chicagopcdc/Automated-Matching-of-Patients-to-Clinical-Trials/pull/3"
         ],
-        "link": "https://github.com/chicagopcdc/Automated-Matching-of-Patients-to-Clinical-Trials/pulls?q=author%3ADev10-sys"
-      },
-      {
-        "name": "BeagleBoard",
-        "tagline": "Linux Kernel / Embedded Systems",
-        "role": "Contributor",
-        "contributions": [
-          "Kernel-level and embedded system related improvements",
-          "Documentation and integration work across BeagleBoard ecosystem"
-        ],
-        "impact": "Low-level systems exposure, Linux-based hardware workflows, and embedded runtime understanding.",
-        "link": "https://github.com/beagleboard/beagleboard/pulls?q=author%3ADev10-sys"
+        "link": "https://github.com/chicagopcdc/Automated-Matching-of-Patients-to-Clinical-Trials/pulls?q=is%3Apr+author%3ADev10-sys+-is%3Aunmerged"
       },
       {
         "name": "CHAOSS",
@@ -237,19 +225,7 @@
           "https://github.com/chaoss/grimoirelab-perceval/pull/885",
           "https://github.com/chaoss/community/pull/765"
         ],
-        "link": "https://github.com/chaoss/grimoirelab-perceval/pulls?q=author%3ADev10-sys"
-      },
-      {
-        "name": "OWASP",
-        "tagline": "Security Automation & Workflow",
-        "role": "Contributor",
-        "contributions": [
-          "GitHub Actions workflow to prevent duplicate quality labels",
-          "Automation enforcement in issue management"
-        ],
-        "impact": "Improved contributor workflow hygiene and CI-based quality enforcement.",
-        "links": ["https://github.com/OWASP-BLT/BLT/pull/5540"],
-        "link": "https://github.com/OWASP-BLT/BLT/pulls?q=author%3ADev10-sys"
+        "link": "https://github.com/chaoss/grimoirelab-perceval/pulls?q=is%3Apr+author%3ADev10-sys+-is%3Aunmerged"
       }
     ]
   },

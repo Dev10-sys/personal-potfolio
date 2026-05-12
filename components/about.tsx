@@ -22,9 +22,16 @@ export function About() {
         
         <div className="space-y-6">
           <div className="space-y-2">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-              About Me
-            </h2>
+            <div className="flex items-center gap-4">
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+                About Me
+              </h2>
+              <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#F7931A]/10 border border-[#F7931A]/30 relative">
+                <div className="absolute inset-0 bg-[#F7931A]/5 animate-pulse rounded-full" />
+                <div className="w-1.5 h-1.5 rounded-full bg-[#F7931A] shadow-[0_0_8px_#F7931A] animate-pulse" />
+                <span className="text-xs font-bold text-[#F7931A] tracking-wider relative z-10">GSOC'26 • Sugar Labs</span>
+              </div>
+            </div>
             <div className="flex flex-wrap gap-4 text-muted-foreground text-sm font-medium">
               <div className="flex items-center gap-1.5">
                 <MapPin className="h-4 w-4" />
@@ -33,10 +40,6 @@ export function About() {
               <div className="flex items-center gap-1.5">
                 <GraduationCap className="h-4 w-4" />
                 {site.profile.education}
-              </div>
-              <div className="flex items-center gap-1.5">
-                <Building2 className="h-4 w-4" />
-                {site.profile.university}
               </div>
             </div>
           </div>
