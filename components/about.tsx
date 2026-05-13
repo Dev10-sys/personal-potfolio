@@ -29,7 +29,7 @@ export function About() {
               <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#F7931A]/10 border border-[#F7931A]/30 relative">
                 <div className="absolute inset-0 bg-[#F7931A]/5 animate-pulse rounded-full" />
                 <div className="w-1.5 h-1.5 rounded-full bg-[#F7931A] shadow-[0_0_8px_#F7931A] animate-pulse" />
-                <span className="text-xs font-bold text-[#F7931A] tracking-wider relative z-10">GSOC'26 • Sugar Labs</span>
+                <span className="text-xs font-bold text-[#F7931A] tracking-wider relative z-10">Google Summer of Code 2026 • Sugar Labs</span>
               </div>
             </div>
             <div className="flex flex-wrap gap-4 text-muted-foreground text-sm font-medium">

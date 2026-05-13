@@ -92,9 +92,9 @@ export function Hero() {
               <div className="relative flex items-center justify-center w-16 h-16 shrink-0">
                 <div className="absolute inset-0 bg-white/10 rounded-full blur-md animate-pulse"></div>
                 <img 
-                  src="https://developers.google.com/open-source/gsoc/resources/downloads/GSoC-icon-192.png" 
-                  alt="GSoC Logo" 
-                  className="w-16 h-16 object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.5)] animate-[spin_8s_linear_infinite] group-hover:animate-[spin_4s_linear_infinite] brightness-125 contrast-125" 
+                  src="/image.png" 
+                  alt="Google Summer of Code Logo" 
+                  className="w-16 h-16 object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.5)] animate-[spin_8s_linear_infinite] group-hover:animate-[spin_4s_linear_infinite]" 
                 />
               </div>
               
@@ -104,8 +104,8 @@ export function Hero() {
                 <span className="text-xs font-mono text-white/70 uppercase tracking-[0.25em] leading-none mb-2 flex items-center gap-2">
                   Official Contributor <ExternalLink className="w-3 h-3 inline-block opacity-70" />
                 </span>
-                <span className="text-xl md:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/70 leading-none tracking-wide">
-                  GSoC '26 <span className="text-[#F7931A] mx-2">•</span> Sugar Labs
+                <span className="text-lg md:text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/70 leading-none tracking-wide">
+                  Google Summer of Code 2026 <span className="text-[#F7931A] mx-2">•</span> Sugar Labs
                 </span>
               </div>
             </div>

@@ -109,21 +109,6 @@
     },
     "organizations": [
       {
-        "name": "Hyperledger Identus",
-        "tagline": "Enterprise SSI and Verifiable Credentials SDK",
-        "role": "Contributor",
-        "contributions": [
-          "Fixed runtime errors in DIDComm invitation tests",
-          "Corrected UUID module resolution for strict ES imports"
-        ],
-        "impact": "Restored test suite stability for OutOfBandInvitation flows in the TypeScript SDK.",
-        "tech": ["TypeScript", "SSI", "DIDComm"],
-        "links": [
-          "https://github.com/hyperledger-identus/sdk-ts/pull/591"
-        ],
-        "link": "https://github.com/hyperledger-identus/sdk-ts/pulls?q=is%3Apr+author%3ADev10-sys+%28is%3Aopen+OR+is%3Amerged%29"
-      },
-      {
         "name": "SugarLabs",
         "tagline": "Linux Desktop Environment – Python / GTK",
         "role": "Core contributor to Sugar Learning Environment.",
@@ -137,6 +122,24 @@
         "impact": "Improved system stability, input reliability, and UI behavior across core desktop components.",
         "tech": ["Python", "GTK", "D-Bus"],
         "link": "https://github.com/sugarlabs/sugar/pulls?q=is%3Apr+author%3ADev10-sys+%28is%3Aopen+OR+is%3Amerged%29"
+      },
+      {
+        "name": "Web3j (LFDT)",
+        "tagline": "Blockchain protocol fixes and JVM-level reliability improvements",
+        "role": "Contributor",
+        "contributions": [
+          "Fixed EIP-4844 transaction encoding impacting signing correctness",
+          "Resolved ClassLoader memory leak in async execution layer",
+          "Improved type safety in RPC response handling"
+        ],
+        "impact": "Improved protocol reliability and system performance for Ethereum-based JVM applications.",
+        "links": [
+          "https://github.com/LFDT-web3j/web3j/pull/2257",
+          "https://github.com/LFDT-web3j/web3j/pull/2255",
+          "https://github.com/LFDT-web3j/web3j/pull/2254"
+        ],
+        "tech": ["Java", "Ethereum", "EIP-4844"],
+        "link": "https://github.com/LFDT-web3j/web3j/pulls?q=is%3Apr+author%3ADev10-sys+%28is%3Aopen+OR+is%3Amerged%29"
       },
       {
         "name": "OpenSSF (RSTUF)",
@@ -162,24 +165,6 @@
         "link": "https://github.com/repository-service-tuf/repository-service-tuf/pulls?q=is%3Apr+author%3ADev10-sys+%28is%3Aopen+OR+is%3Amerged%29"
       },
       {
-        "name": "Web3j (LFDT)",
-        "tagline": "Blockchain protocol fixes and JVM-level reliability improvements",
-        "role": "Contributor",
-        "contributions": [
-          "Fixed EIP-4844 transaction encoding impacting signing correctness",
-          "Resolved ClassLoader memory leak in async execution layer",
-          "Improved type safety in RPC response handling"
-        ],
-        "impact": "Improved protocol reliability and system performance for Ethereum-based JVM applications.",
-        "links": [
-          "https://github.com/LFDT-web3j/web3j/pull/2257",
-          "https://github.com/LFDT-web3j/web3j/pull/2255",
-          "https://github.com/LFDT-web3j/web3j/pull/2254"
-        ],
-        "tech": ["Java", "Ethereum", "EIP-4844"],
-        "link": "https://github.com/LFDT-web3j/web3j/pulls?q=is%3Apr+author%3ADev10-sys+%28is%3Aopen+OR+is%3Amerged%29"
-      },
-      {
         "name": "Hyperledger Cacti",
         "tagline": "Enterprise blockchain infra, dependency security, and protocol feature development",
         "role": "Contributor",
@@ -199,6 +184,21 @@
         ],
         "tech": ["TypeScript", "Docker", "Blockchain"],
         "link": "https://github.com/hyperledger-cacti/cacti/pulls?q=is%3Apr+author%3ADev10-sys+%28is%3Aopen+OR+is%3Amerged%29"
+      },
+      {
+        "name": "Hyperledger Identus",
+        "tagline": "Enterprise SSI and Verifiable Credentials SDK",
+        "role": "Contributor",
+        "contributions": [
+          "Fixed runtime errors in DIDComm invitation tests",
+          "Corrected UUID module resolution for strict ES imports"
+        ],
+        "impact": "Restored test suite stability for OutOfBandInvitation flows in the TypeScript SDK.",
+        "tech": ["TypeScript", "SSI", "DIDComm"],
+        "links": [
+          "https://github.com/hyperledger-identus/sdk-ts/pull/591"
+        ],
+        "link": "https://github.com/hyperledger-identus/sdk-ts/pulls?q=is%3Apr+author%3ADev10-sys+%28is%3Aopen+OR+is%3Amerged%29"
       },
       {
         "name": "SONiC",

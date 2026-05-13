@@ -50,7 +50,7 @@ export function OpenSourcePreview() {
         {/* Stats Grid - High Impact */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
           {[
-            { label: "GSoC 2026", value: "1x", icon: Trophy, color: "text-[#F7931A]", badge: "Sugar Labs" },
+            { label: "Google Summer of Code 2026", value: "1x", icon: Trophy, color: "text-[#F7931A]", badge: "Sugar Labs" },
             { label: "Total Contributions", value: openSource.stats.totalPRs, icon: Trophy, color: "text-primary" },
             { label: "Accepted PRs", value: openSource.stats.mergedPRs, icon: GitPullRequest, color: "text-green-500" },
             { label: "Organizations", value: openSource.stats.orgs, icon: Globe, color: "text-blue-500" },
@@ -91,6 +91,9 @@ export function OpenSourcePreview() {
                     <div className="flex items-start justify-between mb-4 relative">
                       <div className="h-20 w-20 rounded-2xl bg-muted/50 flex items-center justify-center font-bold text-xl transition-colors overflow-hidden border border-border/40 shrink-0">
                         {(() => {
+                           if (org.name === "SugarLabs") {
+                             return <img src="/image.png" alt={org.name} className="w-full h-full object-cover" />;
+                           }
                            const repoUrlMatch = org.link.match(/github\.com\/([^\/]+)/);
                            const orgId = repoUrlMatch ? repoUrlMatch[1] : null;
                            return orgId ? (
@@ -106,9 +109,9 @@ export function OpenSourcePreview() {
                             <div className="flex items-center gap-2 bg-black/90 border border-[#F7931A]/40 text-white px-3 py-1.5 rounded-xl shadow-[0_0_20px_rgba(247,147,26,0.2)] backdrop-blur-xl relative overflow-hidden">
                               <div className="absolute inset-0 bg-[#F7931A]/10 animate-pulse"></div>
                               <div className="relative w-6 h-6 flex items-center justify-center shrink-0">
-                                <img src="https://developers.google.com/open-source/gsoc/resources/downloads/GSoC-icon-192.png" className="w-6 h-6 object-contain drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] animate-[spin_6s_linear_infinite] brightness-125 contrast-125" />
+                                <img src="/image.png" className="w-6 h-6 object-contain drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] animate-[spin_6s_linear_infinite] brightness-125 contrast-125" />
                               </div>
-                              <span className="text-[10px] font-black uppercase tracking-wide leading-none drop-shadow-md pr-1">GSoC '26</span>
+                              <span className="text-[10px] font-black uppercase tracking-wide leading-none drop-shadow-md pr-1">Google Summer of Code 2026</span>
                             </div>
                           </div>
                         )}
